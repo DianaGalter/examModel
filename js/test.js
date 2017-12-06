@@ -2137,20 +2137,29 @@ var response = {
     }
   }
 };
+var responseArray = [];
 
 for (let i = 0; i < 10; i++) {
-	//var responseArray[i] = {}
-	//responseArray[i].title = response.response.docs[i].headline.main;
-	l(response.response.docs[i].headline.main);
-	//responseArray[i].body = response.response.docs[i].snippet;
-	l(response.response.docs[i].snippet);
-	//responseArray[i].url = response.response.docs[i].web_url;
-	l(response.response.docs[i].web_url);
-	//responseArray[i].tag = response.response.docs[i].section_name;
-	if (!response.response.docs[i].section_name) {
-		l('others');
-	}
-	
+	responseArray[i] = {};
+	responseArray[i].title = response.response.docs[i].headline.main;
+	responseArray[i].body = response.response.docs[i].snippet;
+	responseArray[i].url = response.response.docs[i].web_url;
+	switch(response.response.docs[i].section_name) {
+		case 'World':
+			responseArray[i].tag = "World";
+			break;
+		case 'Europe':
+			responseArray[i].tag = "Europe";
+			break;
+		case 'Politics':
+			responseArray[i].tag = "Politics";
+			break;
+		case 'Sports':
+			responseArray[i].tag = "Sports";
+			break;
+		default:
+			responseArray[i].tag = "Others";
+	};
 }
-
+l(responseArray);
 //console.log(response.response.docs[0]);

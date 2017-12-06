@@ -21,20 +21,27 @@ function request () {
 };
 /*обработаем ответ, как только его получим*/
 function requestHandling(response){
-	var parsedResponse = JSON.parse(response);
-
-	/*CITY_LIST_DOM[num].innerHTML = cityName + ' / ' + parsedResponse.list[0].main.temp + '°';
-	if (num == 4) {
-		var index = 0;
-		parsedResponse.list.forEach(function(item) {
-			if(item.dt_txt.split(' ')[1] == '15:00:00') {
-				var dateValue = item.dt_txt.split(' ')[0].split('-');
-				FORECAST_ITEM_DATE[index].innerHTML = dateValue[2] + '.' + dateValue[1];
-				FORECAST_ITEM_TEMP[index].innerHTML = item.main.temp + '°';
-				index++;
-			};
-		});
-		l(parsedResponse.city.name.toUpperCase());
-		CURRENT_CITY_NAME.innerHTML = cityName;*/
+	var responseArray = [];
+	for (let i = 0; i < 10; i++) {
+		responseArray[i] = {};
+		responseArray[i].title = response.response.docs[i].headline.main;
+		responseArray[i].body = response.response.docs[i].snippet;
+		responseArray[i].url = response.response.docs[i].web_url;
+		switch(response.response.docs[i].section_name) {
+			case 'World':
+				responseArray[i].tag = "World";
+				break;
+			case 'Europe':
+				responseArray[i].tag = "Europe";
+				break;
+			case 'Politics':
+				responseArray[i].tag = "Politics";
+				break;
+			case 'Sports':
+				responseArray[i].tag = "Sports";
+				break;
+			default:
+				responseArray[i].tag = "Others";
+		};
 	};
 };
