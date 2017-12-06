@@ -175,6 +175,13 @@ html, body {
     background-image: url("../images/seen-hover.png");
 }
 
+.news-item__tag {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #cfdae9;
+    display: inline-block;
+}
+
 .add-border {
     box-sizing: border-box;
     border: 1px solid;

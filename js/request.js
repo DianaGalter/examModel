@@ -1,5 +1,6 @@
 l = console.log;
 const API_KEY = '722bbc78da5c4d94b88f249b337adbd2';
+const newsBlock = document.getElementsByClassName('news')[0];
 
 request();
 
@@ -45,6 +46,20 @@ function requestHandling(response){
 				responseArray[i].tag = "Others";
 		};
 	};
-	l(responseArray);
+	createArticle(responseArray);
 };
 
+
+function createArticle (responseArray) {
+	for(let i = 0; i < 10; i++) {
+		var article = `<article class="news-item">
+                <div class="news-item__title">` + responseArray[i].title + `</div>
+                <div class="news-item__body">` + responseArray[i].body + `<br /><a class="news-item__tag">#` + responseArray[i].tag + `</a></div>
+                <a class="news-item__close" title="Close this article"></a>
+                <a class="news-item__like" title="I like it!"></a>
+                <a class="news-item__seen" title="I have already seen that"></a>
+            </article>`;
+        newsBlock.innerHTML += article;
+	}
+    
+};
