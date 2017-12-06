@@ -6,15 +6,50 @@
   <title>Breaking News</title>
   <link rel="stylesheet" href="styles/style.css">
   <!--<script type="text/javascript" src='js/request.js' defer></script>-->
-  <script type="text/javascript" src='js/test.json' defer></script>
+  <script type="text/javascript" src='js/test.js' defer></script>
 </head>
 
 <body>
-    <div class="container">
+    <div class="root">
         <header class="header">
-            <a href="http://nytimes.com" class="header__url"><img src="images/header__logo.png" alt="logo NY Times" class="header__logo"></a>
+            <a href="http://nytimes.com" target="_blank" class="header__url"><img src="images/header__logo.png" alt="logo NY Times" class="header__logo"></a>
+            <div class="header__container">
+                <a class="header-tags">All</a>
+                <a class="header-tags">World</a>
+                <a class="header-tags">Europe</a>
+                <a class="header-tags">Politics</a>
+                <a class="header-tags">Sports</a>
+                <a class="header-tags">Others</a>
+            </div>
         </header>
-        <div class="news"></div>
+        <div class="side-bar">
+            <ul class="menu">
+                <li class="menu__item">
+                    <a class="menu-tags" title="Show me my faves">Bookmarks</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu-tags" title="Hide what I marked as viewed">Hide viewed</a>
+                </li>
+                <li class="menu__item">
+                    <div class="search">
+                        <input type="text" class="search__input" placeholder="Search">
+                        <a class="search__icon">&#128269;</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="news">
+            <!--Тут типа пример, как должно выглядеть-->
+            <article class="news-item">
+                <div class="news-item__title">Justices Take Up Dispute Over Wedding Cake for Gay Couple</div>
+                <div class="news-item__body">The Supreme Court is taking up the highly anticipated case of the Colorado baker who refused to make a wedding cake for a same-sex couple.</div>
+                <a class="news-item__close" title="Close this article"></a>
+                <a class="news-item__like" title="I like it!"></a>
+                <a class="news-item__seen" title="I have already seen that"></a>
+            </article>
+
+        </div>
+        
     </div>
 </body>
 </html>

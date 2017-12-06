@@ -1,4 +1,5 @@
-{
+var l = console.log;
+var response = {
   "status": "OK",
   "copyright": "Copyright (c) 2017 The New York Times Company. All Rights Reserved.",
   "response": {
@@ -2135,4 +2136,21 @@
       "time": 1151
     }
   }
+};
+
+for (let i = 0; i < 10; i++) {
+	//var responseArray[i] = {}
+	//responseArray[i].title = response.response.docs[i].headline.main;
+	l(response.response.docs[i].headline.main);
+	//responseArray[i].body = response.response.docs[i].snippet;
+	l(response.response.docs[i].snippet);
+	//responseArray[i].url = response.response.docs[i].web_url;
+	l(response.response.docs[i].web_url);
+	//responseArray[i].tag = response.response.docs[i].section_name;
+	if (!response.response.docs[i].section_name) {
+		l('others');
+	}
+	
 }
+
+//console.log(response.response.docs[0]);
