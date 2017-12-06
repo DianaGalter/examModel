@@ -21,8 +21,9 @@ function request () {
 };
 /*обработаем ответ, как только его получим*/
 function requestHandling(response){
+	var response = JSON.parse(response);
 	var responseArray = [];
-	for (let i = 0; i < 10; i++) {
+		for (let i = 0; i < 10; i++) {
 		responseArray[i] = {};
 		responseArray[i].title = response.response.docs[i].headline.main;
 		responseArray[i].body = response.response.docs[i].snippet;
@@ -44,4 +45,6 @@ function requestHandling(response){
 				responseArray[i].tag = "Others";
 		};
 	};
+	l(responseArray);
 };
+
