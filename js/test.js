@@ -1,2141 +1,2036 @@
 var l = console.log;
+
+var responseArray = [];
+
+for (let i = 0; i < 10; i++) {
+	responseArray[i] = {};
+	responseArray[i].title = response.results.title;
+	responseArray[i].abstract = response.results.abstract;
+	responseArray[i].url = response.results.url;
+	switch(response.results.section) {
+		case 'World':
+			responseArray[i].tag = "World";
+			break;
+		case 'Europe':
+			responseArray[i].tag = "Europe";
+			break;
+		case 'Politics':
+			responseArray[i].tag = "Politics";
+			break;
+		case 'Sports':
+			responseArray[i].tag = "Sports";
+			break;
+		default:
+			responseArray[i].tag = "Others";
+	};
+}
+l(responseArray);
+
 var response = {
   "status": "OK",
-  "copyright": "Copyright (c) 2017 The New York Times Company. All Rights Reserved.",
-  "response": {
-    "docs": [
-      {
-        "web_url": "https://www.nytimes.com/aponline/2017/12/05/us/politics/ap-us-supreme-court-wedding-cake-case.html",
-        "snippet": "The Supreme Court is taking up the highly anticipated case of the Colorado baker who refused to make a wedding cake for a same-sex couple.",
-        "blog": {},
-        "source": "AP",
-        "multimedia": [],
-        "headline": {
-          "main": "Justices Take Up Dispute Over Wedding Cake for Gay Couple",
-          "kicker": null,
-          "content_kicker": null,
-          "print_headline": "Justices Take Up Dispute Over Wedding Cake for Gay Couple",
-          "name": null,
-          "seo": null,
-          "sub": null
-        },
-        "keywords": [],
-        "pub_date": "2017-12-05T07:12:30+0000",
-        "document_type": "article",
-        "new_desk": "None",
-        "section_name": "Politics",
-        "byline": {
-          "original": "By THE ASSOCIATED PRESS",
-          "person": [],
-          "organization": "THE ASSOCIATED PRESS"
-        },
-        "type_of_material": "News",
-        "_id": "5a2646ea95d0e0246f21a36b",
-        "word_count": 132,
-        "score": 1,
-        "uri": "nyt://article/961d05fb-62a1-5aa4-95aa-b88dfe80d894"
-      },
-      {
-        "web_url": "https://www.nytimes.com/reuters/2017/12/05/business/05reuters-global-markets.html",
-        "snippet": "Asian shares dipped slightly on Tuesday as investors' rotation out of technology shares took a toll on some of the region's tech heavyweights although hopes of a major tax cut in the United States underpinned risk sentiment.",
-        "blog": {},
-        "source": "Reuters",
-        "multimedia": [],
-        "headline": {
-          "main": "Asian Shares Down as Tech Blues Offset U.S. Tax Cut Optimism",
-          "kicker": null,
-          "content_kicker": null,
-          "print_headline": "Asian Shares Down as Tech Blues Offset U.S. Tax Cut Optimism",
-          "name": null,
-          "seo": null,
-          "sub": null
-        },
-        "keywords": [],
-        "pub_date": "2017-12-05T07:12:28+0000",
-        "document_type": "article",
-        "new_desk": "None",
-        "byline": {
-          "original": "By REUTERS",
-          "person": [],
-          "organization": "REUTERS"
-        },
-        "type_of_material": "News",
-        "_id": "5a2646e695d0e0246f21a36a",
-        "word_count": 652,
-        "score": 1,
-        "uri": "nyt://article/b1a1e5d0-eaf2-5cba-9587-46b3426e45bd"
-      },
-      {
-        "web_url": "https://www.nytimes.com/2017/12/05/us/politics/06conyers.html",
-        "snippet": "The country’s longest-serving congressman plans to announce his decision Wednesday, said his great-nephew, who plans to run for the seat.",
-        "blog": {},
-        "source": "The New York Times",
-        "multimedia": [
-          {
-            "rank": 0,
-            "subtype": "xlarge",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-articleLarge.jpg",
-            "height": 400,
-            "width": 600,
-            "legacy": {
-              "xlargewidth": 600,
-              "xlarge": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-articleLarge.jpg",
-              "xlargeheight": 400
-            },
-            "subType": "xlarge",
-            "crop_name": "articleLarge"
-          },
-          {
-            "rank": 0,
-            "subtype": "wide",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-thumbWide.jpg",
-            "height": 126,
-            "width": 190,
-            "legacy": {
-              "wide": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-thumbWide.jpg",
-              "widewidth": 190,
-              "wideheight": 126
-            },
-            "subType": "wide",
-            "crop_name": "thumbWide"
-          },
-          {
-            "rank": 0,
-            "subtype": "thumbnail",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-thumbStandard.jpg",
-            "height": 75,
-            "width": 75,
-            "legacy": {
-              "thumbnailheight": 75,
-              "thumbnail": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-thumbStandard.jpg",
-              "thumbnailwidth": 75
-            },
-            "subType": "thumbnail",
-            "crop_name": "thumbStandard"
-          },
-          {
-            "rank": 0,
-            "subtype": "articleInline",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-articleInline.jpg",
-            "height": 127,
-            "width": 190,
-            "legacy": {},
-            "subType": "articleInline",
-            "crop_name": "articleInline"
-          },
-          {
-            "rank": 0,
-            "subtype": "blog225",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-blog225.jpg",
-            "height": 150,
-            "width": 225,
-            "legacy": {},
-            "subType": "blog225",
-            "crop_name": "blog225"
-          },
-          {
-            "rank": 0,
-            "subtype": "blog427",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-blog427.jpg",
-            "height": 285,
-            "width": 427,
-            "legacy": {},
-            "subType": "blog427",
-            "crop_name": "blog427"
-          },
-          {
-            "rank": 0,
-            "subtype": "blog480",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-blog480.jpg",
-            "height": 320,
-            "width": 480,
-            "legacy": {},
-            "subType": "blog480",
-            "crop_name": "blog480"
-          },
-          {
-            "rank": 0,
-            "subtype": "blog533",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-blog533.jpg",
-            "height": 355,
-            "width": 533,
-            "legacy": {},
-            "subType": "blog533",
-            "crop_name": "blog533"
-          },
-          {
-            "rank": 0,
-            "subtype": "blogSmallInline",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-blogSmallInline.jpg",
-            "height": 101,
-            "width": 151,
-            "legacy": {},
-            "subType": "blogSmallInline",
-            "crop_name": "blogSmallInline"
-          },
-          {
-            "rank": 0,
-            "subtype": "blogSmallThumb",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-blogSmallThumb.jpg",
-            "height": 50,
-            "width": 50,
-            "legacy": {},
-            "subType": "blogSmallThumb",
-            "crop_name": "blogSmallThumb"
-          },
-          {
-            "rank": 0,
-            "subtype": "facebookJumbo",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-facebookJumbo.jpg",
-            "height": 550,
-            "width": 1050,
-            "legacy": {},
-            "subType": "facebookJumbo",
-            "crop_name": "facebookJumbo"
-          },
-          {
-            "rank": 0,
-            "subtype": "filmstrip",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-filmstrip.jpg",
-            "height": 190,
-            "width": 190,
-            "legacy": {},
-            "subType": "filmstrip",
-            "crop_name": "filmstrip"
-          },
-          {
-            "rank": 0,
-            "subtype": "hpLarge",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-hpLarge.jpg",
-            "height": 287,
-            "width": 511,
-            "legacy": {},
-            "subType": "hpLarge",
-            "crop_name": "hpLarge"
-          },
-          {
-            "rank": 0,
-            "subtype": "hpSmall",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-hpSmall.jpg",
-            "height": 109,
-            "width": 163,
-            "legacy": {},
-            "subType": "hpSmall",
-            "crop_name": "hpSmall"
-          },
-          {
-            "rank": 0,
-            "subtype": "jumbo",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-jumbo.jpg",
-            "height": 682,
-            "width": 1024,
-            "legacy": {},
-            "subType": "jumbo",
-            "crop_name": "jumbo"
-          },
-          {
-            "rank": 0,
-            "subtype": "largeHorizontal375",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-largeHorizontal375.jpg",
-            "height": 250,
-            "width": 375,
-            "legacy": {},
-            "subType": "largeHorizontal375",
-            "crop_name": "largeHorizontal375"
-          },
-          {
-            "rank": 0,
-            "subtype": "largeHorizontalJumbo",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-largeHorizontalJumbo.jpg",
-            "height": 683,
-            "width": 1024,
-            "legacy": {},
-            "subType": "largeHorizontalJumbo",
-            "crop_name": "largeHorizontalJumbo"
-          },
-          {
-            "rank": 0,
-            "subtype": "largeWidescreen573",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-largeWidescreen573.jpg",
-            "height": 322,
-            "width": 573,
-            "legacy": {},
-            "subType": "largeWidescreen573",
-            "crop_name": "largeWidescreen573"
-          },
-          {
-            "rank": 0,
-            "subtype": "largeWidescreen1050",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-largeWidescreen1050.jpg",
-            "height": 591,
-            "width": 1050,
-            "legacy": {},
-            "subType": "largeWidescreen1050",
-            "crop_name": "largeWidescreen1050"
-          },
-          {
-            "rank": 0,
-            "subtype": "master1050",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-master1050.jpg",
-            "height": 700,
-            "width": 1050,
-            "legacy": {},
-            "subType": "master1050",
-            "crop_name": "master1050"
-          },
-          {
-            "rank": 0,
-            "subtype": "master180",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-master180.jpg",
-            "height": 120,
-            "width": 180,
-            "legacy": {},
-            "subType": "master180",
-            "crop_name": "master180"
-          },
-          {
-            "rank": 0,
-            "subtype": "master315",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-master315.jpg",
-            "height": 210,
-            "width": 315,
-            "legacy": {},
-            "subType": "master315",
-            "crop_name": "master315"
-          },
-          {
-            "rank": 0,
-            "subtype": "master495",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-master495.jpg",
-            "height": 330,
-            "width": 495,
-            "legacy": {},
-            "subType": "master495",
-            "crop_name": "master495"
-          },
-          {
-            "rank": 0,
-            "subtype": "master768",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-master768.jpg",
-            "height": 512,
-            "width": 768,
-            "legacy": {},
-            "subType": "master768",
-            "crop_name": "master768"
-          },
-          {
-            "rank": 0,
-            "subtype": "mediumFlexible177",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-mediumFlexible177.jpg",
-            "height": 118,
-            "width": 177,
-            "legacy": {},
-            "subType": "mediumFlexible177",
-            "crop_name": "mediumFlexible177"
-          },
-          {
-            "rank": 0,
-            "subtype": "mediumSquare149",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-mediumSquare149.jpg",
-            "height": 149,
-            "width": 149,
-            "legacy": {},
-            "subType": "mediumSquare149",
-            "crop_name": "mediumSquare149"
-          },
-          {
-            "rank": 0,
-            "subtype": "mediumThreeByTwo210",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-mediumThreeByTwo210.jpg",
-            "height": 140,
-            "width": 210,
-            "legacy": {},
-            "subType": "mediumThreeByTwo210",
-            "crop_name": "mediumThreeByTwo210"
-          },
-          {
-            "rank": 0,
-            "subtype": "mediumThreeByTwo225",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-mediumThreeByTwo225.jpg",
-            "height": 150,
-            "width": 225,
-            "legacy": {},
-            "subType": "mediumThreeByTwo225",
-            "crop_name": "mediumThreeByTwo225"
-          },
-          {
-            "rank": 0,
-            "subtype": "mediumThreeByTwo440",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-mediumThreeByTwo440.jpg",
-            "height": 293,
-            "width": 440,
-            "legacy": {},
-            "subType": "mediumThreeByTwo440",
-            "crop_name": "mediumThreeByTwo440"
-          },
-          {
-            "rank": 0,
-            "subtype": "miniMoth",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-miniMoth.jpg",
-            "height": 70,
-            "width": 151,
-            "legacy": {},
-            "subType": "miniMoth",
-            "crop_name": "miniMoth"
-          },
-          {
-            "rank": 0,
-            "subtype": "moth",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-moth.jpg",
-            "height": 151,
-            "width": 151,
-            "legacy": {},
-            "subType": "moth",
-            "crop_name": "moth"
-          },
-          {
-            "rank": 0,
-            "subtype": "popup",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-popup.jpg",
-            "height": 433,
-            "width": 650,
-            "legacy": {},
-            "subType": "popup",
-            "crop_name": "popup"
-          },
-          {
-            "rank": 0,
-            "subtype": "sfSpan",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-sfSpan.jpg",
-            "height": 263,
-            "width": 395,
-            "legacy": {},
-            "subType": "sfSpan",
-            "crop_name": "sfSpan"
-          },
-          {
-            "rank": 0,
-            "subtype": "slide",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-slide.jpg",
-            "height": 400,
-            "width": 600,
-            "legacy": {},
-            "subType": "slide",
-            "crop_name": "slide"
-          },
-          {
-            "rank": 0,
-            "subtype": "smallSquare168",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-smallSquare168.jpg",
-            "height": 168,
-            "width": 168,
-            "legacy": {},
-            "subType": "smallSquare168",
-            "crop_name": "smallSquare168"
-          },
-          {
-            "rank": 0,
-            "subtype": "smallSquare252",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-smallSquare252.jpg",
-            "height": 252,
-            "width": 252,
-            "legacy": {},
-            "subType": "smallSquare252",
-            "crop_name": "smallSquare252"
-          },
-          {
-            "rank": 0,
-            "subtype": "square320",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-square320.jpg",
-            "height": 320,
-            "width": 320,
-            "legacy": {},
-            "subType": "square320",
-            "crop_name": "square320"
-          },
-          {
-            "rank": 0,
-            "subtype": "square640",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-square640.jpg",
-            "height": 640,
-            "width": 640,
-            "legacy": {},
-            "subType": "square640",
-            "crop_name": "square640"
-          },
-          {
-            "rank": 0,
-            "subtype": "superJumbo",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-superJumbo.jpg",
-            "height": 1365,
-            "width": 2048,
-            "legacy": {},
-            "subType": "superJumbo",
-            "crop_name": "superJumbo"
-          },
-          {
-            "rank": 0,
-            "subtype": "thumbLarge",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-thumbLarge.jpg",
-            "height": 150,
-            "width": 150,
-            "legacy": {},
-            "subType": "thumbLarge",
-            "crop_name": "thumbLarge"
-          },
-          {
-            "rank": 0,
-            "subtype": "tmagArticle",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-tmagArticle.jpg",
-            "height": 394,
-            "width": 592,
-            "legacy": {},
-            "subType": "tmagArticle",
-            "crop_name": "tmagArticle"
-          },
-          {
-            "rank": 0,
-            "subtype": "tmagSF",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-tmagSF.jpg",
-            "height": 241,
-            "width": 362,
-            "legacy": {},
-            "subType": "tmagSF",
-            "crop_name": "tmagSF"
-          },
-          {
-            "rank": 0,
-            "subtype": "verticalTwoByThree735",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-verticalTwoByThree735.jpg",
-            "height": 1102,
-            "width": 735,
-            "legacy": {},
-            "subType": "verticalTwoByThree735",
-            "crop_name": "verticalTwoByThree735"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoFifteenBySeven1305",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-videoFifteenBySeven1305.jpg",
-            "height": 609,
-            "width": 1305,
-            "legacy": {},
-            "subType": "videoFifteenBySeven1305",
-            "crop_name": "videoFifteenBySeven1305"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoFifteenBySeven2610",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-videoFifteenBySeven2610.jpg",
-            "height": 1218,
-            "width": 2610,
-            "legacy": {},
-            "subType": "videoFifteenBySeven2610",
-            "crop_name": "videoFifteenBySeven2610"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoHpMedium",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-videoHpMedium.jpg",
-            "height": 211,
-            "width": 375,
-            "legacy": {},
-            "subType": "videoHpMedium",
-            "crop_name": "videoHpMedium"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoLarge",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-videoLarge.jpg",
-            "height": 507,
-            "width": 768,
-            "legacy": {},
-            "subType": "videoLarge",
-            "crop_name": "videoLarge"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNine1050",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-videoSixteenByNine1050.jpg",
-            "height": 591,
-            "width": 1050,
-            "legacy": {},
-            "subType": "videoSixteenByNine1050",
-            "crop_name": "videoSixteenByNine1050"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNine150",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-videoSixteenByNine150.jpg",
-            "height": 84,
-            "width": 150,
-            "legacy": {},
-            "subType": "videoSixteenByNine150",
-            "crop_name": "videoSixteenByNine150"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNine225",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-videoSixteenByNine225.jpg",
-            "height": 126,
-            "width": 225,
-            "legacy": {},
-            "subType": "videoSixteenByNine225",
-            "crop_name": "videoSixteenByNine225"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNine310",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-videoSixteenByNine310.jpg",
-            "height": 174,
-            "width": 310,
-            "legacy": {},
-            "subType": "videoSixteenByNine310",
-            "crop_name": "videoSixteenByNine310"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNine390",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-videoSixteenByNine390.jpg",
-            "height": 219,
-            "width": 390,
-            "legacy": {},
-            "subType": "videoSixteenByNine390",
-            "crop_name": "videoSixteenByNine390"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNine480",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-videoSixteenByNine480.jpg",
-            "height": 270,
-            "width": 480,
-            "legacy": {},
-            "subType": "videoSixteenByNine480",
-            "crop_name": "videoSixteenByNine480"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNine495",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-videoSixteenByNine495.jpg",
-            "height": 278,
-            "width": 495,
-            "legacy": {},
-            "subType": "videoSixteenByNine495",
-            "crop_name": "videoSixteenByNine495"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNine540",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-videoSixteenByNine540.jpg",
-            "height": 304,
-            "width": 540,
-            "legacy": {},
-            "subType": "videoSixteenByNine540",
-            "crop_name": "videoSixteenByNine540"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNine600",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-videoSixteenByNine600.jpg",
-            "height": 338,
-            "width": 600,
-            "legacy": {},
-            "subType": "videoSixteenByNine600",
-            "crop_name": "videoSixteenByNine600"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNine768",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-videoSixteenByNine768.jpg",
-            "height": 432,
-            "width": 768,
-            "legacy": {},
-            "subType": "videoSixteenByNine768",
-            "crop_name": "videoSixteenByNine768"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNine96",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-videoSixteenByNine96.jpg",
-            "height": 54,
-            "width": 96,
-            "legacy": {},
-            "subType": "videoSixteenByNine96",
-            "crop_name": "videoSixteenByNine96"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNineJumbo1600",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-videoSixteenByNineJumbo1600.jpg",
-            "height": 900,
-            "width": 1600,
-            "legacy": {},
-            "subType": "videoSixteenByNineJumbo1600",
-            "crop_name": "videoSixteenByNineJumbo1600"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSmall",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-videoSmall.jpg",
-            "height": 281,
-            "width": 500,
-            "legacy": {},
-            "subType": "videoSmall",
-            "crop_name": "videoSmall"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoThumb",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-videoThumb.jpg",
-            "height": 50,
-            "width": 75,
-            "legacy": {},
-            "subType": "videoThumb",
-            "crop_name": "videoThumb"
-          },
-          {
-            "rank": 0,
-            "subtype": "watch268",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-watch268.jpg",
-            "height": 303,
-            "width": 272,
-            "legacy": {},
-            "subType": "watch268",
-            "crop_name": "watch268"
-          },
-          {
-            "rank": 0,
-            "subtype": "watch308",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-watch308.jpg",
-            "height": 348,
-            "width": 312,
-            "legacy": {},
-            "subType": "watch308",
-            "crop_name": "watch308"
-          },
-          {
-            "rank": 0,
-            "subtype": "windowsTile336H",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/06/world/06-Conyers-1/06-Conyers-1-windowsTile336H.jpg",
-            "height": 336,
-            "width": 694,
-            "legacy": {},
-            "subType": "windowsTile336H",
-            "crop_name": "windowsTile336H"
-          }
-        ],
-        "headline": {
-          "main": "Conyers Won’t Seek Re-election in Wake of Harassment Claims, Relative Says",
-          "kicker": null,
-          "content_kicker": null,
-          "print_headline": "Conyers Won’t Seek Re-election in Wake of Harassment Claims, Relative Says",
-          "name": null,
-          "seo": null,
-          "sub": null
-        },
-        "keywords": [
-          {
-            "name": "subject",
-            "value": "Sexual Harassment",
-            "rank": 1,
-            "major": "N"
-          },
-          {
-            "name": "subject",
-            "value": "United States Politics and Government",
-            "rank": 2,
-            "major": "N"
-          },
-          {
-            "name": "subject",
-            "value": "Suits and Litigation (Civil)",
-            "rank": 3,
-            "major": "N"
-          },
-          {
-            "name": "organizations",
-            "value": "Dallas Morning News",
-            "rank": 4,
-            "major": "N"
-          },
-          {
-            "name": "organizations",
-            "value": "Democratic Party",
-            "rank": 5,
-            "major": "N"
-          },
-          {
-            "name": "organizations",
-            "value": "House of Representatives",
-            "rank": 6,
-            "major": "N"
-          },
-          {
-            "name": "organizations",
-            "value": "Republican Party",
-            "rank": 7,
-            "major": "N"
-          },
-          {
-            "name": "organizations",
-            "value": "Senate",
-            "rank": 8,
-            "major": "N"
-          },
-          {
-            "name": "organizations",
-            "value": "Senate Committee on the Judiciary",
-            "rank": 9,
-            "major": "N"
-          },
-          {
-            "name": "persons",
-            "value": "Barton, Joe L",
-            "rank": 10,
-            "major": "N"
-          },
-          {
-            "name": "persons",
-            "value": "Conyers, John Jr",
-            "rank": 11,
-            "major": "N"
-          },
-          {
-            "name": "persons",
-            "value": "Farenthold, R Blake",
-            "rank": 12,
-            "major": "N"
-          },
-          {
-            "name": "persons",
-            "value": "Franken, Al",
-            "rank": 13,
-            "major": "N"
-          },
-          {
-            "name": "persons",
-            "value": "Greene, Lauren",
-            "rank": 14,
-            "major": "N"
-          },
-          {
-            "name": "persons",
-            "value": "Pelosi, Nancy",
-            "rank": 15,
-            "major": "N"
-          },
-          {
-            "name": "persons",
-            "value": "Ryan, Paul D Jr",
-            "rank": 16,
-            "major": "N"
-          },
-          {
-            "name": "glocations",
-            "value": "Detroit (Mich)",
-            "rank": 17,
-            "major": "N"
-          },
-          {
-            "name": "glocations",
-            "value": "Michigan",
-            "rank": 18,
-            "major": "N"
-          }
-        ],
-        "pub_date": "2017-12-05T07:09:36+0000",
-        "document_type": "article",
-        "new_desk": "Washington",
-        "section_name": "Politics",
-        "byline": {
-          "original": "By YAMICHE ALCINDOR",
-          "person": [
+  "copyright": "Copyright (c) 2017 The New York Times Company.  All Rights Reserved.",
+  "num_results": 1697,
+  "results": [
+    {
+      "url": "https://www.nytimes.com/2017/12/06/us/california-fires.html",
+      "adx_keywords": "Wildfires;Ventura County (Calif);Los Angeles (Calif)",
+      "column": null,
+      "section": "U.S.",
+      "byline": "By JENNIFER MEDINA and RICHARD PÉREZ-PEÑA",
+      "type": "Article",
+      "title": "California Fires Enter the Heart of Los Angeles",
+      "abstract": "A brush fire erupted near the Getty Museum before dawn on Wednesday, while a much larger fire continued to rage out of control in the Ventura area.",
+      "published_date": "2017-12-06",
+      "source": "The New York Times",
+      "id": 100000005589676,
+      "asset_id": 100000005589676,
+      "views": 1,
+      "des_facet": [
+        "WILDFIRES"
+      ],
+      "org_facet": "",
+      "per_facet": "",
+      "geo_facet": [
+        "VENTURA COUNTY (CALIF)",
+        "LOS ANGELES (CALIF)"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "A home burned in the Bel-Air neighborhood of Los Angeles on Wednesday.",
+          "copyright": "Kyle Grillot/Agence France-Presse — Getty Images",
+          "approved_for_syndication": 1,
+          "media-metadata": [
             {
-              "firstname": "Yamiche",
-              "middlename": null,
-              "lastname": "ALCINDOR",
-              "qualifier": null,
-              "title": null,
-              "role": "reported",
-              "organization": "",
-              "rank": 1
-            }
-          ],
-          "organization": null
-        },
-        "type_of_material": "News",
-        "_id": "5a26463a95d0e0246f21a369",
-        "word_count": 607,
-        "score": 1,
-        "uri": "nyt://article/6c6f3e48-84d6-5f4f-b9f0-03b29f598547"
-      },
-      {
-        "web_url": "https://www.nytimes.com/aponline/2017/12/05/world/asia/ap-as-japan-endangered-species.html",
-        "snippet": "Two types of New Zealand kiwi birds are rare bright spots in a mostly grim assessment of global species at risk of extinction.",
-        "blog": {},
-        "source": "AP",
-        "multimedia": [],
-        "headline": {
-          "main": "2 Kiwi Birds Are Rare Bright Spot in Grim Extinction Report",
-          "kicker": null,
-          "content_kicker": null,
-          "print_headline": "2 Kiwi Birds Are Rare Bright Spot in Grim Extinction Report",
-          "name": null,
-          "seo": null,
-          "sub": null
-        },
-        "keywords": [],
-        "pub_date": "2017-12-05T07:09:32+0000",
-        "document_type": "article",
-        "new_desk": "None",
-        "section_name": "Asia Pacific",
-        "byline": {
-          "original": "By THE ASSOCIATED PRESS",
-          "person": [],
-          "organization": "THE ASSOCIATED PRESS"
-        },
-        "type_of_material": "News",
-        "_id": "5a26463495d0e0246f21a367",
-        "word_count": 132,
-        "score": 1,
-        "uri": "nyt://article/86281b03-d112-5208-a2b9-9218b53c374f"
-      },
-      {
-        "web_url": "https://www.nytimes.com/reuters/2017/12/05/business/05reuters-fnac-carrefour.html",
-        "snippet": "French retailers Carrefour and Fnac Darty announced a purchasing partnership for domestic appliances and consumer electronics in France, as Carrefour undertakes plans to cut costs in order to boost its earnings.",
-        "blog": {},
-        "source": "Reuters",
-        "multimedia": [],
-        "headline": {
-          "main": "French Retailers Carrefour and Fnac Darty Form Purchasing Partnership",
-          "kicker": null,
-          "content_kicker": null,
-          "print_headline": "French Retailers Carrefour and Fnac Darty Form Purchasing Partnership",
-          "name": null,
-          "seo": null,
-          "sub": null
-        },
-        "keywords": [],
-        "pub_date": "2017-12-05T07:09:27+0000",
-        "document_type": "article",
-        "new_desk": "None",
-        "byline": {
-          "original": "By REUTERS",
-          "person": [],
-          "organization": "REUTERS"
-        },
-        "type_of_material": "News",
-        "_id": "5a26463495d0e0246f21a368",
-        "word_count": 296,
-        "score": 1,
-        "uri": "nyt://article/e5748aae-fecd-50a9-ba9f-d2278d7bcdd5"
-      },
-      {
-        "web_url": "https://www.nytimes.com/aponline/2017/12/05/world/europe/ap-eu-poland-politics.html",
-        "snippet": "Poland's Prime Minister Beata Szydlo has sent a tweet that seems to read like a farewell, amid rumors in Warsaw that she might be replaced.",
-        "blog": {},
-        "source": "AP",
-        "multimedia": [],
-        "headline": {
-          "main": "Polish PM Sends Tweet Seen as a Sign She Might Be Replaced",
-          "kicker": null,
-          "content_kicker": null,
-          "print_headline": "Polish PM Sends Tweet Seen as a Sign She Might Be Replaced",
-          "name": null,
-          "seo": null,
-          "sub": null
-        },
-        "keywords": [],
-        "pub_date": "2017-12-05T07:06:30+0000",
-        "document_type": "article",
-        "new_desk": "None",
-        "section_name": "Europe",
-        "byline": {
-          "original": "By THE ASSOCIATED PRESS",
-          "person": [],
-          "organization": "THE ASSOCIATED PRESS"
-        },
-        "type_of_material": "News",
-        "_id": "5a26458195d0e0246f21a366",
-        "word_count": 134,
-        "score": 1,
-        "uri": "nyt://article/6697edf2-35b2-5d97-b7e0-592e0c4bee46"
-      },
-      {
-        "web_url": "https://www.nytimes.com/reuters/2017/12/05/business/05reuters-global-oil.html",
-        "snippet": "Oil prices inched lower on Tuesday ahead of U.S. crude inventories data, as the market weighed the impact of rising U.S. crude output versus last week's deal between OPEC and other crude producers to extend output curbs.",
-        "blog": {},
-        "source": "Reuters",
-        "multimedia": [],
-        "headline": {
-          "main": "Oil Prices Dip Ahead of U.S. Crude Stocks Data",
-          "kicker": null,
-          "content_kicker": null,
-          "print_headline": "Oil Prices Dip Ahead of U.S. Crude Stocks Data",
-          "name": null,
-          "seo": null,
-          "sub": null
-        },
-        "keywords": [],
-        "pub_date": "2017-12-05T07:06:27+0000",
-        "document_type": "article",
-        "new_desk": "None",
-        "byline": {
-          "original": "By REUTERS",
-          "person": [],
-          "organization": "REUTERS"
-        },
-        "type_of_material": "News",
-        "_id": "5a26457c95d0e0246f21a365",
-        "word_count": 412,
-        "score": 1,
-        "uri": "nyt://article/7cfc667e-ec67-51e3-80b2-d1fa46adbc0d"
-      },
-      {
-        "web_url": "https://www.nytimes.com/2017/12/05/learning/flag.html",
-        "snippet": "What is this image saying?",
-        "blog": {},
-        "source": "The New York Times",
-        "multimedia": [
-          {
-            "rank": 0,
-            "subtype": "xlarge",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-articleLarge.jpg",
-            "height": 421,
-            "width": 600,
-            "legacy": {
-              "xlargewidth": 600,
-              "xlarge": "images/2017/12/04/opinion/04cauley/04cauley-articleLarge.jpg",
-              "xlargeheight": 421
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07fires-02-SUB/07fires-02-SUB-square320.jpg",
+              "format": "square320",
+              "height": 320,
+              "width": 320
             },
-            "subType": "xlarge",
-            "crop_name": "articleLarge"
-          },
-          {
-            "rank": 0,
-            "subtype": "wide",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-thumbWide.jpg",
-            "height": 126,
-            "width": 190,
-            "legacy": {
-              "wide": "images/2017/12/04/opinion/04cauley/04cauley-thumbWide.jpg",
-              "widewidth": 190,
-              "wideheight": 126
-            },
-            "subType": "wide",
-            "crop_name": "thumbWide"
-          },
-          {
-            "rank": 0,
-            "subtype": "thumbnail",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-thumbStandard.jpg",
-            "height": 75,
-            "width": 75,
-            "legacy": {
-              "thumbnailheight": 75,
-              "thumbnail": "images/2017/12/04/opinion/04cauley/04cauley-thumbStandard.jpg",
-              "thumbnailwidth": 75
-            },
-            "subType": "thumbnail",
-            "crop_name": "thumbStandard"
-          },
-          {
-            "rank": 0,
-            "subtype": "articleInline",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-articleInline.jpg",
-            "height": 133,
-            "width": 190,
-            "legacy": {},
-            "subType": "articleInline",
-            "crop_name": "articleInline"
-          },
-          {
-            "rank": 0,
-            "subtype": "blog225",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-blog225.jpg",
-            "height": 158,
-            "width": 225,
-            "legacy": {},
-            "subType": "blog225",
-            "crop_name": "blog225"
-          },
-          {
-            "rank": 0,
-            "subtype": "blog427",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-blog427.jpg",
-            "height": 300,
-            "width": 427,
-            "legacy": {},
-            "subType": "blog427",
-            "crop_name": "blog427"
-          },
-          {
-            "rank": 0,
-            "subtype": "blog480",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-blog480.jpg",
-            "height": 337,
-            "width": 480,
-            "legacy": {},
-            "subType": "blog480",
-            "crop_name": "blog480"
-          },
-          {
-            "rank": 0,
-            "subtype": "blog533",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-blog533.jpg",
-            "height": 374,
-            "width": 533,
-            "legacy": {},
-            "subType": "blog533",
-            "crop_name": "blog533"
-          },
-          {
-            "rank": 0,
-            "subtype": "blogSmallInline",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-blogSmallInline.jpg",
-            "height": 106,
-            "width": 151,
-            "legacy": {},
-            "subType": "blogSmallInline",
-            "crop_name": "blogSmallInline"
-          },
-          {
-            "rank": 0,
-            "subtype": "blogSmallThumb",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-blogSmallThumb.jpg",
-            "height": 50,
-            "width": 50,
-            "legacy": {},
-            "subType": "blogSmallThumb",
-            "crop_name": "blogSmallThumb"
-          },
-          {
-            "rank": 0,
-            "subtype": "facebookJumbo",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-facebookJumbo.jpg",
-            "height": 549,
-            "width": 1050,
-            "legacy": {},
-            "subType": "facebookJumbo",
-            "crop_name": "facebookJumbo"
-          },
-          {
-            "rank": 0,
-            "subtype": "filmstrip",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-filmstrip.jpg",
-            "height": 190,
-            "width": 190,
-            "legacy": {},
-            "subType": "filmstrip",
-            "crop_name": "filmstrip"
-          },
-          {
-            "rank": 0,
-            "subtype": "hpLarge",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-hpLarge.jpg",
-            "height": 287,
-            "width": 511,
-            "legacy": {},
-            "subType": "hpLarge",
-            "crop_name": "hpLarge"
-          },
-          {
-            "rank": 0,
-            "subtype": "hpSmall",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-hpSmall.jpg",
-            "height": 115,
-            "width": 163,
-            "legacy": {},
-            "subType": "hpSmall",
-            "crop_name": "hpSmall"
-          },
-          {
-            "rank": 0,
-            "subtype": "jumbo",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-jumbo.jpg",
-            "height": 719,
-            "width": 1024,
-            "legacy": {},
-            "subType": "jumbo",
-            "crop_name": "jumbo"
-          },
-          {
-            "rank": 0,
-            "subtype": "largeHorizontal375",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-largeHorizontal375.jpg",
-            "height": 250,
-            "width": 375,
-            "legacy": {},
-            "subType": "largeHorizontal375",
-            "crop_name": "largeHorizontal375"
-          },
-          {
-            "rank": 0,
-            "subtype": "largeHorizontalJumbo",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-largeHorizontalJumbo.jpg",
-            "height": 682,
-            "width": 1024,
-            "legacy": {},
-            "subType": "largeHorizontalJumbo",
-            "crop_name": "largeHorizontalJumbo"
-          },
-          {
-            "rank": 0,
-            "subtype": "largeWidescreen573",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-largeWidescreen573.jpg",
-            "height": 322,
-            "width": 573,
-            "legacy": {},
-            "subType": "largeWidescreen573",
-            "crop_name": "largeWidescreen573"
-          },
-          {
-            "rank": 0,
-            "subtype": "largeWidescreen1050",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-largeWidescreen1050.jpg",
-            "height": 590,
-            "width": 1050,
-            "legacy": {},
-            "subType": "largeWidescreen1050",
-            "crop_name": "largeWidescreen1050"
-          },
-          {
-            "rank": 0,
-            "subtype": "master1050",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-master1050.jpg",
-            "height": 738,
-            "width": 1050,
-            "legacy": {},
-            "subType": "master1050",
-            "crop_name": "master1050"
-          },
-          {
-            "rank": 0,
-            "subtype": "master180",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-master180.jpg",
-            "height": 126,
-            "width": 180,
-            "legacy": {},
-            "subType": "master180",
-            "crop_name": "master180"
-          },
-          {
-            "rank": 0,
-            "subtype": "master315",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-master315.jpg",
-            "height": 221,
-            "width": 315,
-            "legacy": {},
-            "subType": "master315",
-            "crop_name": "master315"
-          },
-          {
-            "rank": 0,
-            "subtype": "master495",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-master495.jpg",
-            "height": 348,
-            "width": 495,
-            "legacy": {},
-            "subType": "master495",
-            "crop_name": "master495"
-          },
-          {
-            "rank": 0,
-            "subtype": "master768",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-master768.jpg",
-            "height": 540,
-            "width": 768,
-            "legacy": {},
-            "subType": "master768",
-            "crop_name": "master768"
-          },
-          {
-            "rank": 0,
-            "subtype": "mediumFlexible177",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-mediumFlexible177.jpg",
-            "height": 124,
-            "width": 177,
-            "legacy": {},
-            "subType": "mediumFlexible177",
-            "crop_name": "mediumFlexible177"
-          },
-          {
-            "rank": 0,
-            "subtype": "mediumSquare149",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-mediumSquare149.jpg",
-            "height": 149,
-            "width": 149,
-            "legacy": {},
-            "subType": "mediumSquare149",
-            "crop_name": "mediumSquare149"
-          },
-          {
-            "rank": 0,
-            "subtype": "mediumThreeByTwo210",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-mediumThreeByTwo210.jpg",
-            "height": 140,
-            "width": 210,
-            "legacy": {},
-            "subType": "mediumThreeByTwo210",
-            "crop_name": "mediumThreeByTwo210"
-          },
-          {
-            "rank": 0,
-            "subtype": "mediumThreeByTwo225",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-mediumThreeByTwo225.jpg",
-            "height": 150,
-            "width": 225,
-            "legacy": {},
-            "subType": "mediumThreeByTwo225",
-            "crop_name": "mediumThreeByTwo225"
-          },
-          {
-            "rank": 0,
-            "subtype": "mediumThreeByTwo440",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-mediumThreeByTwo440.jpg",
-            "height": 293,
-            "width": 440,
-            "legacy": {},
-            "subType": "mediumThreeByTwo440",
-            "crop_name": "mediumThreeByTwo440"
-          },
-          {
-            "rank": 0,
-            "subtype": "miniMoth",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-miniMoth.jpg",
-            "height": 70,
-            "width": 151,
-            "legacy": {},
-            "subType": "miniMoth",
-            "crop_name": "miniMoth"
-          },
-          {
-            "rank": 0,
-            "subtype": "moth",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-moth.jpg",
-            "height": 151,
-            "width": 151,
-            "legacy": {},
-            "subType": "moth",
-            "crop_name": "moth"
-          },
-          {
-            "rank": 0,
-            "subtype": "popup",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-popup.jpg",
-            "height": 457,
-            "width": 650,
-            "legacy": {},
-            "subType": "popup",
-            "crop_name": "popup"
-          },
-          {
-            "rank": 0,
-            "subtype": "sfSpan",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-sfSpan.jpg",
-            "height": 263,
-            "width": 395,
-            "legacy": {},
-            "subType": "sfSpan",
-            "crop_name": "sfSpan"
-          },
-          {
-            "rank": 0,
-            "subtype": "slide",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-slide.jpg",
-            "height": 421,
-            "width": 600,
-            "legacy": {},
-            "subType": "slide",
-            "crop_name": "slide"
-          },
-          {
-            "rank": 0,
-            "subtype": "smallSquare168",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-smallSquare168.jpg",
-            "height": 168,
-            "width": 168,
-            "legacy": {},
-            "subType": "smallSquare168",
-            "crop_name": "smallSquare168"
-          },
-          {
-            "rank": 0,
-            "subtype": "smallSquare252",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-smallSquare252.jpg",
-            "height": 252,
-            "width": 252,
-            "legacy": {},
-            "subType": "smallSquare252",
-            "crop_name": "smallSquare252"
-          },
-          {
-            "rank": 0,
-            "subtype": "square320",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-square320.jpg",
-            "height": 320,
-            "width": 320,
-            "legacy": {},
-            "subType": "square320",
-            "crop_name": "square320"
-          },
-          {
-            "rank": 0,
-            "subtype": "square640",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-square640.jpg",
-            "height": 640,
-            "width": 640,
-            "legacy": {},
-            "subType": "square640",
-            "crop_name": "square640"
-          },
-          {
-            "rank": 0,
-            "subtype": "superJumbo",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-superJumbo.jpg",
-            "height": 1439,
-            "width": 2048,
-            "legacy": {},
-            "subType": "superJumbo",
-            "crop_name": "superJumbo"
-          },
-          {
-            "rank": 0,
-            "subtype": "thumbLarge",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-thumbLarge.jpg",
-            "height": 150,
-            "width": 150,
-            "legacy": {},
-            "subType": "thumbLarge",
-            "crop_name": "thumbLarge"
-          },
-          {
-            "rank": 0,
-            "subtype": "tmagArticle",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-tmagArticle.jpg",
-            "height": 416,
-            "width": 592,
-            "legacy": {},
-            "subType": "tmagArticle",
-            "crop_name": "tmagArticle"
-          },
-          {
-            "rank": 0,
-            "subtype": "tmagSF",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-tmagSF.jpg",
-            "height": 254,
-            "width": 362,
-            "legacy": {},
-            "subType": "tmagSF",
-            "crop_name": "tmagSF"
-          },
-          {
-            "rank": 0,
-            "subtype": "verticalTwoByThree735",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-verticalTwoByThree735.jpg",
-            "height": 1102,
-            "width": 735,
-            "legacy": {},
-            "subType": "verticalTwoByThree735",
-            "crop_name": "verticalTwoByThree735"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoFifteenBySeven1305",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-videoFifteenBySeven1305.jpg",
-            "height": 609,
-            "width": 1305,
-            "legacy": {},
-            "subType": "videoFifteenBySeven1305",
-            "crop_name": "videoFifteenBySeven1305"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoFifteenBySeven2610",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-videoFifteenBySeven2610.jpg",
-            "height": 1218,
-            "width": 2610,
-            "legacy": {},
-            "subType": "videoFifteenBySeven2610",
-            "crop_name": "videoFifteenBySeven2610"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoHpMedium",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-videoHpMedium.jpg",
-            "height": 211,
-            "width": 375,
-            "legacy": {},
-            "subType": "videoHpMedium",
-            "crop_name": "videoHpMedium"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoLarge",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-videoLarge.jpg",
-            "height": 507,
-            "width": 768,
-            "legacy": {},
-            "subType": "videoLarge",
-            "crop_name": "videoLarge"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNine1050",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-videoSixteenByNine1050.jpg",
-            "height": 591,
-            "width": 1050,
-            "legacy": {},
-            "subType": "videoSixteenByNine1050",
-            "crop_name": "videoSixteenByNine1050"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNine150",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-videoSixteenByNine150.jpg",
-            "height": 84,
-            "width": 150,
-            "legacy": {},
-            "subType": "videoSixteenByNine150",
-            "crop_name": "videoSixteenByNine150"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNine225",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-videoSixteenByNine225.jpg",
-            "height": 126,
-            "width": 225,
-            "legacy": {},
-            "subType": "videoSixteenByNine225",
-            "crop_name": "videoSixteenByNine225"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNine310",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-videoSixteenByNine310.jpg",
-            "height": 174,
-            "width": 310,
-            "legacy": {},
-            "subType": "videoSixteenByNine310",
-            "crop_name": "videoSixteenByNine310"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNine390",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-videoSixteenByNine390.jpg",
-            "height": 219,
-            "width": 390,
-            "legacy": {},
-            "subType": "videoSixteenByNine390",
-            "crop_name": "videoSixteenByNine390"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNine480",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-videoSixteenByNine480.jpg",
-            "height": 270,
-            "width": 480,
-            "legacy": {},
-            "subType": "videoSixteenByNine480",
-            "crop_name": "videoSixteenByNine480"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNine495",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-videoSixteenByNine495.jpg",
-            "height": 278,
-            "width": 495,
-            "legacy": {},
-            "subType": "videoSixteenByNine495",
-            "crop_name": "videoSixteenByNine495"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNine540",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-videoSixteenByNine540.jpg",
-            "height": 304,
-            "width": 540,
-            "legacy": {},
-            "subType": "videoSixteenByNine540",
-            "crop_name": "videoSixteenByNine540"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNine600",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-videoSixteenByNine600.jpg",
-            "height": 338,
-            "width": 600,
-            "legacy": {},
-            "subType": "videoSixteenByNine600",
-            "crop_name": "videoSixteenByNine600"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNine768",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-videoSixteenByNine768.jpg",
-            "height": 432,
-            "width": 768,
-            "legacy": {},
-            "subType": "videoSixteenByNine768",
-            "crop_name": "videoSixteenByNine768"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNine96",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-videoSixteenByNine96.jpg",
-            "height": 54,
-            "width": 96,
-            "legacy": {},
-            "subType": "videoSixteenByNine96",
-            "crop_name": "videoSixteenByNine96"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSixteenByNineJumbo1600",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-videoSixteenByNineJumbo1600.jpg",
-            "height": 899,
-            "width": 1600,
-            "legacy": {},
-            "subType": "videoSixteenByNineJumbo1600",
-            "crop_name": "videoSixteenByNineJumbo1600"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoSmall",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-videoSmall.jpg",
-            "height": 281,
-            "width": 500,
-            "legacy": {},
-            "subType": "videoSmall",
-            "crop_name": "videoSmall"
-          },
-          {
-            "rank": 0,
-            "subtype": "videoThumb",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-videoThumb.jpg",
-            "height": 50,
-            "width": 75,
-            "legacy": {},
-            "subType": "videoThumb",
-            "crop_name": "videoThumb"
-          },
-          {
-            "rank": 0,
-            "subtype": "watch268",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-watch268.jpg",
-            "height": 303,
-            "width": 272,
-            "legacy": {},
-            "subType": "watch268",
-            "crop_name": "watch268"
-          },
-          {
-            "rank": 0,
-            "subtype": "watch308",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-watch308.jpg",
-            "height": 348,
-            "width": 312,
-            "legacy": {},
-            "subType": "watch308",
-            "crop_name": "watch308"
-          },
-          {
-            "rank": 0,
-            "subtype": "windowsTile336H",
-            "caption": null,
-            "credit": null,
-            "type": "image",
-            "url": "images/2017/12/04/opinion/04cauley/04cauley-windowsTile336H.jpg",
-            "height": 336,
-            "width": 694,
-            "legacy": {},
-            "subType": "windowsTile336H",
-            "crop_name": "windowsTile336H"
-          }
-        ],
-        "headline": {
-          "main": "Flag",
-          "kicker": "Picture Prompts",
-          "content_kicker": "Picture Prompts",
-          "print_headline": "Flag",
-          "name": null,
-          "seo": null,
-          "sub": null
-        },
-        "keywords": [],
-        "pub_date": "2017-12-05T07:02:01+0000",
-        "document_type": "article",
-        "new_desk": "Learning",
-        "byline": {
-          "original": "By NATALIE PROULX",
-          "person": [
             {
-              "firstname": "Natalie",
-              "middlename": null,
-              "lastname": "PROULX",
-              "qualifier": null,
-              "title": null,
-              "role": "reported",
-              "organization": "",
-              "rank": 1
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07fires-02-SUB/07fires-02-SUB-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07fires-02-SUB/merlin_130958424_795c3fd4-8739-4536-8b9c-fdd4d527d0dd-articleInline.jpg",
+              "format": "Normal",
+              "height": 128,
+              "width": 190
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07fires-02-SUB/07fires-02-SUB-sfSpan.jpg",
+              "format": "Large",
+              "height": 263,
+              "width": 395
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07fires-02-SUB/merlin_130958424_795c3fd4-8739-4536-8b9c-fdd4d527d0dd-jumbo.jpg",
+              "format": "Jumbo",
+              "height": 689,
+              "width": 1024
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07fires-02-SUB/merlin_130958424_795c3fd4-8739-4536-8b9c-fdd4d527d0dd-superJumbo.jpg",
+              "format": "superJumbo",
+              "height": 1377,
+              "width": 2048
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07fires-02-SUB/07fires-02-SUB-square640.jpg",
+              "format": "square640",
+              "height": 640,
+              "width": 640
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07fires-02-SUB/07fires-02-SUB-thumbLarge.jpg",
+              "format": "Large Thumbnail",
+              "height": 150,
+              "width": 150
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07fires-02-SUB/07fires-02-SUB-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07fires-02-SUB/07fires-02-SUB-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
             }
-          ],
-          "organization": null
-        },
-        "type_of_material": "News",
-        "_id": "5a26447495d0e0246f21a364",
-        "word_count": 64,
-        "score": 1,
-        "uri": "nyt://article/73b4ce7c-7134-56fb-a2b5-d990a20eba88"
-      },
-      {
-        "web_url": "https://www.nytimes.com/reuters/2017/12/05/business/05reuters-russia-banks-promsvyazbank.html",
-        "snippet": "Promsvyazbank (PSB), one of Russia's biggest private lenders, said on Tuesday its N1.1 capital ratio was expected to reach 7.4 pct as of January 1, 2018 after it sold an asset worth 8 billion roubles (101.41 million pounds).",
-        "blog": {},
-        "source": "Reuters",
-        "multimedia": [],
-        "headline": {
-          "main": "Russia's Promsvyazbank Says It Sold Asset Worth 8 Billion Roubles",
-          "kicker": null,
-          "content_kicker": null,
-          "print_headline": "Russia's Promsvyazbank Says It Sold Asset Worth 8 Billion Roubles",
-          "name": null,
-          "seo": null,
-          "sub": null
-        },
-        "keywords": [],
-        "pub_date": "2017-12-05T07:00:27+0000",
-        "document_type": "article",
-        "new_desk": "None",
-        "byline": {
-          "original": "By REUTERS",
-          "person": [],
-          "organization": "REUTERS"
-        },
-        "type_of_material": "News",
-        "_id": "5a26441495d0e0246f21a363",
-        "word_count": 101,
-        "score": 1,
-        "uri": "nyt://article/e0db02a1-9129-5290-a15a-726ec76b80b4"
-      },
-      {
-        "web_url": "https://www.nytimes.com/2017/12/05/learning/05WODLN.html",
-        "snippet": "This word has appeared in five articles on nytimes.com in the past year.",
-        "blog": {},
-        "source": "The New York Times",
-        "multimedia": [],
-        "headline": {
-          "main": "Word + Quiz: herpetologist",
-          "kicker": "Word of the Day",
-          "content_kicker": "Word of the Day",
-          "print_headline": "Word + Quiz: herpetologist",
-          "name": null,
-          "seo": null,
-          "sub": null
-        },
-        "keywords": [],
-        "pub_date": "2017-12-05T07:00:00+0000",
-        "document_type": "article",
-        "new_desk": "Learning",
-        "byline": {
-          "original": "By THE LEARNING NETWORK",
-          "person": [],
-          "organization": "THE LEARNING NETWORK"
-        },
-        "type_of_material": "News",
-        "_id": "5a2643fc95d0e0246f21a362",
-        "word_count": 155,
-        "score": 1,
-        "uri": "nyt://article/8174eb1d-4a45-5a95-9d07-2213938a9e45"
-      }
-    ],
-    "meta": {
-      "hits": 15393518,
-      "offset": 0,
-      "time": 1151
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.nytimes.com/interactive/2017/12/05/us/harvey-weinstein-complicity.html",
+      "adx_keywords": "Weinstein, Harvey;Sexual Harassment;Sex Crimes;Creative Artists Agency;McGowan, Rose;Movies;Actors and Actresses;Miramax Films;Paltrow, Gwyneth;Walt Disney Company;News and News Media;Benza, A J;National Enquirer;Howard, Dylan;Kirshner, Mia;American Media Inc;Clinton, Hillary Rodham;Dunham, Lena;Judd, Ashley",
+      "column": "",
+      "section": "U.S.",
+      "byline": "By MEGAN TWOHEY, JODI KANTOR, SUSAN DOMINUS, JIM RUTENBERG and STEVE EDER",
+      "type": "Interactive",
+      "title": "Weinstein’s Complicity Machine",
+      "abstract": "The producer Harvey Weinstein relied on powerful relationships across industries to provide him with cover as accusations of sexual misconduct piled up for decades.",
+      "published_date": "2017-12-05",
+      "source": "The New York Times",
+      "id": 100000005583350,
+      "asset_id": 100000005583350,
+      "views": 2,
+      "des_facet": [
+        "SEXUAL HARASSMENT",
+        "SEX CRIMES",
+        "MOVIES",
+        "ACTORS AND ACTRESSES"
+      ],
+      "org_facet": [
+        "CREATIVE ARTISTS AGENCY",
+        "MIRAMAX FILMS",
+        "WALT DISNEY COMPANY",
+        "NEWS AND NEWS MEDIA",
+        "NATIONAL ENQUIRER",
+        "AMERICAN MEDIA INC"
+      ],
+      "per_facet": [
+        "WEINSTEIN, HARVEY",
+        "MCGOWAN, ROSE",
+        "PALTROW, GWYNETH",
+        "BENZA, A J",
+        "HOWARD, DYLAN",
+        "KIRSHNER, MIA",
+        "CLINTON, HILLARY RODHAM",
+        "DUNHAM, LENA",
+        "JUDD, ASHLEY"
+      ],
+      "geo_facet": "",
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Robyn Beck/Agence France-Presse — Getty Images",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2017/11/04/nyregion/00complicity-alpha-promo/04weinstein2-square320-v6.jpg",
+              "format": "square320",
+              "height": 320,
+              "width": 320
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/11/04/nyregion/00complicity-alpha-promo/04weinstein2-thumbStandard-v5.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/11/04/nyregion/00complicity-alpha-promo/04weinstein2-articleInline-v5.jpg",
+              "format": "Normal",
+              "height": 130,
+              "width": 190
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/11/04/nyregion/00complicity-alpha-promo/04weinstein2-sfSpan-v5.jpg",
+              "format": "Large",
+              "height": 263,
+              "width": 395
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/11/04/nyregion/00complicity-alpha-promo/04weinstein2-jumbo-v6.gif",
+              "format": "Jumbo",
+              "height": 674,
+              "width": 1024
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/11/04/nyregion/00complicity-alpha-promo/04weinstein2-superJumbo-v6.gif",
+              "format": "superJumbo",
+              "height": 674,
+              "width": 1024
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/11/04/nyregion/00complicity-alpha-promo/04weinstein2-square640-v6.jpg",
+              "format": "square640",
+              "height": 640,
+              "width": 640
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/11/04/nyregion/00complicity-alpha-promo/04weinstein2-thumbLarge-v5.jpg",
+              "format": "Large Thumbnail",
+              "height": 150,
+              "width": 150
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/11/04/nyregion/00complicity-alpha-promo/04weinstein2-mediumThreeByTwo210-v5.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/11/04/nyregion/00complicity-alpha-promo/04weinstein2-mediumThreeByTwo440-v5.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.nytimes.com/2017/12/06/world/middleeast/trump-jerusalem-israel-capital.html",
+      "adx_keywords": "United States International Relations;Palestinians;Jews and Judaism;Trump, Donald J;Jerusalem (Israel)",
+      "column": null,
+      "section": "World",
+      "byline": "By MARK LANDLER",
+      "type": "Article",
+      "title": "Trump Recognizes Jerusalem as Israel’s Capital and Orders U.S. Embassy to Move",
+      "abstract": "Ignoring warnings from diplomats around the world, President Trump reverses decades of American policy toward the contested city.",
+      "published_date": "2017-12-06",
+      "source": "The New York Times",
+      "id": 100000005589611,
+      "asset_id": 100000005589611,
+      "views": 3,
+      "des_facet": [
+        "UNITED STATES INTERNATIONAL RELATIONS",
+        "JEWS AND JUDAISM"
+      ],
+      "org_facet": [
+        "PALESTINIANS"
+      ],
+      "per_facet": [
+        "TRUMP, DONALD J"
+      ],
+      "geo_facet": [
+        "JERUSALEM (ISRAEL)"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Lior Mizrahi/Getty Images",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07embassy-alpha/07embassy-alpha-square320.jpg",
+              "format": "square320",
+              "height": 320,
+              "width": 320
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07embassy-alpha/07embassy-alpha-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07embassy-alpha/07embassy-alpha-articleInline.jpg",
+              "format": "Normal",
+              "height": 127,
+              "width": 190
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07embassy-alpha/07embassy-alpha-sfSpan.jpg",
+              "format": "Large",
+              "height": 263,
+              "width": 395
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07embassy-alpha/07embassy-alpha-jumbo.jpg",
+              "format": "Jumbo",
+              "height": 683,
+              "width": 1024
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07embassy-alpha/07embassy-alpha-superJumbo.jpg",
+              "format": "superJumbo",
+              "height": 1365,
+              "width": 2048
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07embassy-alpha/07embassy-alpha-square640.jpg",
+              "format": "square640",
+              "height": 640,
+              "width": 640
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07embassy-alpha/07embassy-alpha-thumbLarge.jpg",
+              "format": "Large Thumbnail",
+              "height": 150,
+              "width": 150
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07embassy-alpha/07embassy-alpha-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07embassy-alpha/07embassy-alpha-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.nytimes.com/2017/12/06/us/politics/michael-flynn-russia-sanctions-ripped-up-whistleblower.html",
+      "adx_keywords": "Flynn, Michael T;Cummings, Elijah E;Gowdy, Trey;Trump, Donald J;Russian Interference in 2016 US Elections and Ties to Trump Associates;United States Politics and Government;Embargoes and Sanctions;Russia;Whistle-Blowers",
+      "column": null,
+      "section": "U.S.",
+      "byline": "By MARK MAZZETTI and MICHAEL S. SCHMIDT",
+      "type": "Article",
+      "title": "Flynn Said Russian Sanctions Would Be ‘Ripped Up,’ Whistle-Blower Says",
+      "abstract": "The whistle-blower said Mr. Flynn thought that ending the sanctions would allow a business project he was once involved with to move forward.",
+      "published_date": "2017-12-06",
+      "source": "The New York Times",
+      "id": 100000005590002,
+      "asset_id": 100000005590002,
+      "views": 4,
+      "des_facet": [
+        "RUSSIAN INTERFERENCE IN 2016 US ELECTIONS AND TIES TO TRUMP ASSOCIATES",
+        "UNITED STATES POLITICS AND GOVERNMENT",
+        "EMBARGOES AND SANCTIONS"
+      ],
+      "org_facet": [
+        "WHISTLE-BLOWERS"
+      ],
+      "per_facet": [
+        "FLYNN, MICHAEL T",
+        "CUMMINGS, ELIJAH E",
+        "GOWDY, TREY",
+        "TRUMP, DONALD J"
+      ],
+      "geo_facet": [
+        "RUSSIA"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Michael T. Flynn, President Trump&rsquo;s former national security adviser, pleaded guilty on Friday to lying to the F.B.I. about his conversations with the Russian ambassador to the United States.",
+          "copyright": "Chip Somodevilla/Getty Images",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-flynn/05dc-legal2-square320.jpg",
+              "format": "square320",
+              "height": 320,
+              "width": 320
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-flynn/05dc-legal2-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-flynn/merlin_130758933_6b4dd7e1-4054-4081-8778-4ca6281ef514-articleInline.jpg",
+              "format": "Normal",
+              "height": 127,
+              "width": 190
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-flynn/merlin_130758933_6b4dd7e1-4054-4081-8778-4ca6281ef514-sfSpan.jpg",
+              "format": "Large",
+              "height": 263,
+              "width": 395
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-flynn/merlin_130758933_6b4dd7e1-4054-4081-8778-4ca6281ef514-jumbo.jpg",
+              "format": "Jumbo",
+              "height": 683,
+              "width": 1024
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-flynn/merlin_130758933_6b4dd7e1-4054-4081-8778-4ca6281ef514-superJumbo.jpg",
+              "format": "superJumbo",
+              "height": 1365,
+              "width": 2048
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-flynn/05dc-legal2-square640.jpg",
+              "format": "square640",
+              "height": 640,
+              "width": 640
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-flynn/05dc-legal2-thumbLarge.jpg",
+              "format": "Large Thumbnail",
+              "height": 150,
+              "width": 150
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-flynn/05dc-legal2-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-flynn/05dc-legal2-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.nytimes.com/2017/12/06/us/politics/franken-harrassment-resign.html",
+      "adx_keywords": "Franken, Al;Sexual Harassment;Minnesota;Democratic Party;Senate;United States Politics and Government",
+      "column": null,
+      "section": "U.S.",
+      "byline": "By YAMICHE ALCINDOR and NICHOLAS FANDOS",
+      "type": "Article",
+      "title": "A Democratic Chorus Rises in the Senate: ‘Franken Should Resign’",
+      "abstract": "By Wednesday evening, there was widespread expectation in the Democratic caucus that Senator Al Franken would step down. He has scheduled an announcement on his future in the Senate for Thursday.",
+      "published_date": "2017-12-06",
+      "source": "The New York Times",
+      "id": 100000005589988,
+      "asset_id": 100000005589988,
+      "views": 5,
+      "des_facet": [
+        "UNITED STATES POLITICS AND GOVERNMENT"
+      ],
+      "org_facet": [
+        "SEXUAL HARASSMENT",
+        "DEMOCRATIC PARTY",
+        "SENATE"
+      ],
+      "per_facet": [
+        "FRANKEN, AL"
+      ],
+      "geo_facet": [
+        "MINNESOTA"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Senator Al Franken, Democrat of Minnesota, arriving last month for a committee hearing.",
+          "copyright": "Al Drago for The New York Times",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-harass/07dc-harass-square320.jpg",
+              "format": "square320",
+              "height": 320,
+              "width": 320
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-harass/07dc-harass-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-harass/merlin_130667219_f74251e6-1f32-424e-ac3e-a34fe1bea476-articleInline.jpg",
+              "format": "Normal",
+              "height": 127,
+              "width": 190
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-harass/merlin_130667219_f74251e6-1f32-424e-ac3e-a34fe1bea476-sfSpan.jpg",
+              "format": "Large",
+              "height": 263,
+              "width": 395
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-harass/merlin_130667219_f74251e6-1f32-424e-ac3e-a34fe1bea476-jumbo.jpg",
+              "format": "Jumbo",
+              "height": 683,
+              "width": 1024
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-harass/merlin_130667219_f74251e6-1f32-424e-ac3e-a34fe1bea476-superJumbo.jpg",
+              "format": "superJumbo",
+              "height": 1365,
+              "width": 2048
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-harass/07dc-harass-square640.jpg",
+              "format": "square640",
+              "height": 640,
+              "width": 640
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-harass/07dc-harass-thumbLarge.jpg",
+              "format": "Large Thumbnail",
+              "height": 150,
+              "width": 150
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-harass/07dc-harass-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-harass/07dc-harass-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.nytimes.com/2017/12/05/sports/olympics/ioc-russia-winter-olympics.html",
+      "adx_keywords": "Russia;Olympic Games (2018);Doping (Sports);Olympic Games (2014);International Olympic Committee",
+      "column": null,
+      "section": "Sports",
+      "byline": "By REBECCA R. RUIZ and TARIQ PANJA",
+      "type": "Article",
+      "title": "Russia Banned From Winter Olympics by I.O.C.",
+      "abstract": "The country’s extensive, state-backed doping program results in penalties without precedent. The Russian Federation will not participate, though individual athletes may.",
+      "published_date": "2017-12-05",
+      "source": "The New York Times",
+      "id": 100000005585155,
+      "asset_id": 100000005585155,
+      "views": 6,
+      "des_facet": [
+        "OLYMPIC GAMES (2018)",
+        "OLYMPIC GAMES (2014)"
+      ],
+      "org_facet": [
+        "DOPING (SPORTS)",
+        "INTERNATIONAL OLYMPIC COMMITTEE"
+      ],
+      "per_facet": "",
+      "geo_facet": [
+        "RUSSIA"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Andrej Isakovic/Agence France-Presse — Getty Images",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/sports/06olympics-alpha/06olympics-alpha-square320-v2.jpg",
+              "format": "square320",
+              "height": 320,
+              "width": 320
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/sports/06olympics-alpha/06olympics-alpha-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/sports/06olympics-alpha/06olympics-alpha-articleInline-v2.jpg",
+              "format": "Normal",
+              "height": 127,
+              "width": 190
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/sports/06olympics-alpha/06olympics-alpha-sfSpan-v2.jpg",
+              "format": "Large",
+              "height": 263,
+              "width": 395
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/sports/06olympics-alpha/06olympics-alpha-jumbo-v2.jpg",
+              "format": "Jumbo",
+              "height": 682,
+              "width": 1024
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/sports/06olympics-alpha/06olympics-alpha-superJumbo-v2.jpg",
+              "format": "superJumbo",
+              "height": 1365,
+              "width": 2048
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/sports/06olympics-alpha/06olympics-alpha-square640-v2.jpg",
+              "format": "square640",
+              "height": 640,
+              "width": 640
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/sports/06olympics-alpha/06olympics-alpha-thumbLarge.jpg",
+              "format": "Large Thumbnail",
+              "height": 150,
+              "width": 150
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/sports/06olympics-alpha/06olympics-alpha-mediumThreeByTwo210-v2.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/sports/06olympics-alpha/06olympics-alpha-mediumThreeByTwo440-v2.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.nytimes.com/2017/12/05/world/middleeast/american-embassy-israel-trump-move.html",
+      "adx_keywords": "Trump, Donald J;Jerusalem (Israel);Israel;Diplomatic Service, Embassies and Consulates;Palestinians;Palestinian Authority;Abbas, Mahmoud;United States International Relations;United States Politics and Government",
+      "column": null,
+      "section": "World",
+      "byline": "By MARK LANDLER and DAVID M. HALBFINGER",
+      "type": "Article",
+      "title": "U.S. to Recognize Jerusalem as Israel’s Capital, Trump Says, Alarming Middle East Leaders",
+      "abstract": "Igniting fears of violence in the region, President Trump’s decision could derail any peace initiative, Arab and European leaders warn.",
+      "published_date": "2017-12-05",
+      "source": "The New York Times",
+      "id": 100000005587752,
+      "asset_id": 100000005587752,
+      "views": 7,
+      "des_facet": [
+        "DIPLOMATIC SERVICE, EMBASSIES AND CONSULATES",
+        "PALESTINIANS",
+        "UNITED STATES INTERNATIONAL RELATIONS",
+        "UNITED STATES POLITICS AND GOVERNMENT"
+      ],
+      "org_facet": [
+        "PALESTINIAN AUTHORITY"
+      ],
+      "per_facet": [
+        "TRUMP, DONALD J",
+        "ABBAS, MAHMOUD"
+      ],
+      "geo_facet": [
+        "JERUSALEM (ISRAEL)",
+        "ISRAEL"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Oded Balilty/Associated Press",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/us/politics/06dc-embassy-alpha/06dc-embassy-square320.jpg",
+              "format": "square320",
+              "height": 320,
+              "width": 320
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/us/politics/06dc-embassy-alpha/06dc-embassy-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/us/politics/06dc-embassy-alpha/merlin_130910274_772579c1-1be4-45ca-8e62-5049a88dc0ec-articleInline.jpg",
+              "format": "Normal",
+              "height": 127,
+              "width": 190
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/us/politics/06dc-embassy-alpha/merlin_130910274_772579c1-1be4-45ca-8e62-5049a88dc0ec-sfSpan.jpg",
+              "format": "Large",
+              "height": 263,
+              "width": 395
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/us/politics/06dc-embassy-alpha/merlin_130910274_772579c1-1be4-45ca-8e62-5049a88dc0ec-jumbo.jpg",
+              "format": "Jumbo",
+              "height": 683,
+              "width": 1024
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/us/politics/06dc-embassy-alpha/merlin_130910274_772579c1-1be4-45ca-8e62-5049a88dc0ec-superJumbo.jpg",
+              "format": "superJumbo",
+              "height": 1365,
+              "width": 2048
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/us/politics/06dc-embassy-alpha/06dc-embassy-square640.jpg",
+              "format": "square640",
+              "height": 640,
+              "width": 640
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/us/politics/06dc-embassy-alpha/06dc-embassy-thumbLarge.jpg",
+              "format": "Large Thumbnail",
+              "height": 150,
+              "width": 150
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/us/politics/06dc-embassy-alpha/06dc-embassy-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/us/politics/06dc-embassy-alpha/06dc-embassy-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.nytimes.com/2017/12/06/health/birth-control-breast-cancer-hormones.html",
+      "adx_keywords": "Breast Cancer;Birth Control and Family Planning;Hormones;Estrogen;New England Journal of Medicine;Morch, Lina S;Denmark;University of Copenhagen",
+      "column": null,
+      "section": "Health",
+      "byline": "By RONI CARYN RABIN",
+      "type": "Article",
+      "title": "Birth Control Pills Still Linked to Breast Cancer, Study Finds",
+      "abstract": "Women using birth control pills and I.U.D.s that release hormones face a higher risk than those using methods without hormones, scientists in Denmark reported.",
+      "published_date": "2017-12-06",
+      "source": "The New York Times",
+      "id": 100000005589771,
+      "asset_id": 100000005589771,
+      "views": 8,
+      "des_facet": [
+        "BREAST CANCER",
+        "HORMONES",
+        "ESTROGEN"
+      ],
+      "org_facet": [
+        "BIRTH CONTROL AND FAMILY PLANNING",
+        "NEW ENGLAND JOURNAL OF MEDICINE",
+        "UNIVERSITY OF COPENHAGEN"
+      ],
+      "per_facet": [
+        "MORCH, LINA S"
+      ],
+      "geo_facet": [
+        "DENMARK"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "An ultrasound image of an implanted intrauterine contraceptive device. A study found that women who rely on birth control pills or I.U.D.’s that release hormones face a small but significant increase in the risk for breast cancer.",
+          "copyright": "Dr. Najeeb Layyous/Science Source",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/science/07BREASTCANCER/07BREASTCANCER-square320.jpg",
+              "format": "square320",
+              "height": 320,
+              "width": 320
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/science/07BREASTCANCER/07BREASTCANCER-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/science/07BREASTCANCER/07BREASTCANCER-articleInline.jpg",
+              "format": "Normal",
+              "height": 126,
+              "width": 190
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/science/07BREASTCANCER/07BREASTCANCER-sfSpan.jpg",
+              "format": "Large",
+              "height": 263,
+              "width": 395
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/science/07BREASTCANCER/07BREASTCANCER-jumbo.jpg",
+              "format": "Jumbo",
+              "height": 1024,
+              "width": 683
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/science/07BREASTCANCER/07BREASTCANCER-superJumbo.jpg",
+              "format": "superJumbo",
+              "height": 2048,
+              "width": 1366
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/science/07BREASTCANCER/07BREASTCANCER-square640.jpg",
+              "format": "square640",
+              "height": 640,
+              "width": 640
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/science/07BREASTCANCER/07BREASTCANCER-thumbLarge.jpg",
+              "format": "Large Thumbnail",
+              "height": 150,
+              "width": 150
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/science/07BREASTCANCER/07BREASTCANCER-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/science/07BREASTCANCER/07BREASTCANCER-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.nytimes.com/2017/12/06/technology/coinbase-bitcoin.html",
+      "adx_keywords": "Bitcoin (Currency);Virtual Currency;Start-ups;Coinbase Inc;Ethereum Foundation;Internal Revenue Service",
+      "column": null,
+      "section": "Technology",
+      "byline": "By NATHANIEL POPPER",
+      "type": "Article",
+      "title": "Coinbase: The Heart of the Bitcoin Frenzy",
+      "abstract": "The San Francisco start-up has been at the center of the virtual currency boom. But like any young company, it is experiencing growing pains.",
+      "published_date": "2017-12-06",
+      "source": "The New York Times",
+      "id": 100000005590305,
+      "asset_id": 100000005590305,
+      "views": 9,
+      "des_facet": [
+        "BITCOIN (CURRENCY)",
+        "VIRTUAL CURRENCY"
+      ],
+      "org_facet": [
+        "START-UPS",
+        "COINBASE INC",
+        "ETHEREUM FOUNDATION",
+        "INTERNAL REVENUE SERVICE"
+      ],
+      "per_facet": "",
+      "geo_facet": "",
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Coinbase employees lining up for free food in the gaming room of the company's office in San Francisco.",
+          "copyright": "Jason Henry for The New York Times",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/automobiles/oakImage-1512585783882/oakImage-1512585783882-square320-v2.jpg",
+              "format": "square320",
+              "height": 320,
+              "width": 320
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/automobiles/oakImage-1512585783882/oakImage-1512585783882-thumbStandard-v2.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/automobiles/oakImage-1512585783882/oakImage-1512585783882-articleInline-v2.jpg",
+              "format": "Normal",
+              "height": 127,
+              "width": 190
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/automobiles/oakImage-1512585783882/oakImage-1512585783882-sfSpan-v2.jpg",
+              "format": "Large",
+              "height": 263,
+              "width": 395
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/automobiles/oakImage-1512585783882/oakImage-1512585783882-jumbo.jpg",
+              "format": "Jumbo",
+              "height": 683,
+              "width": 1024
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/automobiles/oakImage-1512585783882/oakImage-1512585783882-superJumbo.jpg",
+              "format": "superJumbo",
+              "height": 1365,
+              "width": 2048
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/automobiles/oakImage-1512585783882/oakImage-1512585783882-square640-v2.jpg",
+              "format": "square640",
+              "height": 640,
+              "width": 640
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/automobiles/oakImage-1512585783882/oakImage-1512585783882-thumbLarge-v2.jpg",
+              "format": "Large Thumbnail",
+              "height": 150,
+              "width": 150
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/automobiles/oakImage-1512585783882/oakImage-1512585783882-mediumThreeByTwo210-v2.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/06/automobiles/oakImage-1512585783882/oakImage-1512585783882-mediumThreeByTwo440-v2.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.nytimes.com/interactive/2017/12/06/us/southern-california-wildfires.html",
+      "adx_keywords": "Fires and Firefighters;Wildfires;Los Angeles (Calif);California",
+      "column": "",
+      "section": "U.S.",
+      "byline": "By SARAH ALMUKHTAR, K.K. REBECCA LAI, DEREK WATKINS and TIM WALLACE",
+      "type": "Interactive",
+      "title": "Where Wildfires Are Raging in Southern California",
+      "abstract": "Wildfires burned near and in Los Angeles and other parts of Southern California, forcing thousands to evacuate.",
+      "published_date": "2017-12-06",
+      "source": "The New York Times",
+      "id": 100000005590049,
+      "asset_id": 100000005590049,
+      "views": 10,
+      "des_facet": [
+        "FIRES AND FIREFIGHTERS",
+        "WILDFIRES"
+      ],
+      "org_facet": "",
+      "per_facet": "",
+      "geo_facet": [
+        "LOS ANGELES (CALIF)",
+        "CALIFORNIA"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "The Thomas fire by Highway 101 near Ventura, Calif., on Thursday.",
+          "copyright": "Mario Tama/Getty Images",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/los-angeles-wildfire-alpha/los-angeles-wildfire-alpha-square320.jpg",
+              "format": "square320",
+              "height": 320,
+              "width": 320
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/los-angeles-wildfire-alpha/los-angeles-wildfire-alpha-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/los-angeles-wildfire-alpha/los-angeles-wildfire-alpha-articleInline.jpg",
+              "format": "Normal",
+              "height": 127,
+              "width": 190
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/los-angeles-wildfire-alpha/los-angeles-wildfire-alpha-sfSpan.jpg",
+              "format": "Large",
+              "height": 263,
+              "width": 395
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/los-angeles-wildfire-alpha/los-angeles-wildfire-alpha-jumbo.jpg",
+              "format": "Jumbo",
+              "height": 683,
+              "width": 1024
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/los-angeles-wildfire-alpha/los-angeles-wildfire-alpha-superJumbo.jpg",
+              "format": "superJumbo",
+              "height": 1365,
+              "width": 2048
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/los-angeles-wildfire-alpha/los-angeles-wildfire-alpha-square640.jpg",
+              "format": "square640",
+              "height": 640,
+              "width": 640
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/los-angeles-wildfire-alpha/los-angeles-wildfire-alpha-thumbLarge.jpg",
+              "format": "Large Thumbnail",
+              "height": 150,
+              "width": 150
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/los-angeles-wildfire-alpha/los-angeles-wildfire-alpha-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/los-angeles-wildfire-alpha/los-angeles-wildfire-alpha-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.nytimes.com/2017/12/06/us/words-with-friends-meeting.html",
+      "adx_keywords": "Friendship;Computer and Video Games;Words with Friends (Video Game);Age, Chronological",
+      "column": null,
+      "section": "U.S.",
+      "byline": "By DANIEL VICTOR",
+      "type": "Article",
+      "title": "He’s 22. She’s 81. Their Friendship Is Melting Hearts.",
+      "abstract": "The two met on the Words With Friends app, and photos of their in-person meeting delighted thousands of people on social media.",
+      "published_date": "2017-12-06",
+      "source": "The New York Times",
+      "id": 100000005590024,
+      "asset_id": 100000005590024,
+      "views": 11,
+      "des_facet": [
+        "FRIENDSHIP",
+        "COMPUTER AND VIDEO GAMES",
+        "AGE, CHRONOLOGICAL"
+      ],
+      "org_facet": "",
+      "per_facet": "",
+      "geo_facet": "",
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Spencer Sleyon meeting his online friend Rosalind Guttman in Florida last weekend.",
+          "copyright": "Rev. Amy Butler",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07xp-wwf/merlin_130949816_84dff795-5b96-4349-8271-0d9b9f3b61f3-square320.jpg",
+              "format": "square320",
+              "height": 320,
+              "width": 320
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07xp-wwf/07xp-wwf-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07xp-wwf/merlin_130949816_84dff795-5b96-4349-8271-0d9b9f3b61f3-articleInline.jpg",
+              "format": "Normal",
+              "height": 253,
+              "width": 190
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07xp-wwf/merlin_130949816_84dff795-5b96-4349-8271-0d9b9f3b61f3-sfSpan.jpg",
+              "format": "Large",
+              "height": 263,
+              "width": 395
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07xp-wwf/merlin_130949816_84dff795-5b96-4349-8271-0d9b9f3b61f3-jumbo.jpg",
+              "format": "Jumbo",
+              "height": 1024,
+              "width": 768
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07xp-wwf/merlin_130949816_84dff795-5b96-4349-8271-0d9b9f3b61f3-superJumbo.jpg",
+              "format": "superJumbo",
+              "height": 2048,
+              "width": 1536
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07xp-wwf/merlin_130949816_84dff795-5b96-4349-8271-0d9b9f3b61f3-square640.jpg",
+              "format": "square640",
+              "height": 640,
+              "width": 640
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07xp-wwf/07xp-wwf-thumbLarge.jpg",
+              "format": "Large Thumbnail",
+              "height": 150,
+              "width": 150
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07xp-wwf/merlin_130949816_84dff795-5b96-4349-8271-0d9b9f3b61f3-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/07xp-wwf/merlin_130949816_84dff795-5b96-4349-8271-0d9b9f3b61f3-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.nytimes.com/2017/12/07/us/california-fire-ventura-county.html",
+      "adx_keywords": "Wildfires;Fires and Firefighters;Los Angeles (Calif);Ventura (Calif);Evacuations and Evacuees",
+      "column": null,
+      "section": "U.S.",
+      "byline": "By THE NEW YORK TIMES",
+      "type": "Article",
+      "title": "Southern California Fires Live Updates: More Areas Under Siege as Wind Gains Strength",
+      "abstract": "Emergency crews in the Los Angeles area were contending with brisk winds, steep terrain and fatigue from days of relentless work.",
+      "published_date": "2017-12-07",
+      "source": "The New York Times",
+      "id": 100000005591904,
+      "asset_id": 100000005591904,
+      "views": 12,
+      "des_facet": [
+        "WILDFIRES",
+        "FIRES AND FIREFIGHTERS"
+      ],
+      "org_facet": [
+        "EVACUATIONS AND EVACUEES"
+      ],
+      "per_facet": "",
+      "geo_facet": [
+        "LOS ANGELES (CALIF)",
+        "VENTURA (CALIF)"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Ventura County firefighters worked to douse embers in Ojai, Calif., on Thursday.",
+          "copyright": "Hilary Swift for The New York Times",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2017/12/08/us/08fires-01SUBSUB/08fires-01SUBSUB-square320.jpg",
+              "format": "square320",
+              "height": 320,
+              "width": 320
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/08/us/08fires-01SUBSUB/08fires-01SUBSUB-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/08/us/08fires-01SUBSUB/08fires-01SUBSUB-articleInline.jpg",
+              "format": "Normal",
+              "height": 127,
+              "width": 190
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/08/us/08fires-01SUBSUB/merlin_131006636_7cc99528-f028-4e6d-9c5a-d624462b1fab-sfSpan.jpg",
+              "format": "Large",
+              "height": 263,
+              "width": 395
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/08/us/08fires-01SUBSUB/merlin_131006636_7cc99528-f028-4e6d-9c5a-d624462b1fab-jumbo.jpg",
+              "format": "Jumbo",
+              "height": 683,
+              "width": 1024
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/08/us/08fires-01SUBSUB/merlin_131006636_7cc99528-f028-4e6d-9c5a-d624462b1fab-superJumbo.jpg",
+              "format": "superJumbo",
+              "height": 1366,
+              "width": 2048
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/08/us/08fires-01SUBSUB/08fires-01SUBSUB-square640.jpg",
+              "format": "square640",
+              "height": 640,
+              "width": 640
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/08/us/08fires-01SUBSUB/08fires-01SUBSUB-thumbLarge.jpg",
+              "format": "Large Thumbnail",
+              "height": 150,
+              "width": 150
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/08/us/08fires-01SUBSUB/merlin_131006636_7cc99528-f028-4e6d-9c5a-d624462b1fab-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/08/us/08fires-01SUBSUB/merlin_131006636_7cc99528-f028-4e6d-9c5a-d624462b1fab-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.nytimes.com/2017/12/06/world/middleeast/salvator-mundi-da-vinci-saudi-prince-bader.html",
+      "adx_keywords": "Art;da Vinci, Leonardo;Auctions;Bader bin Abdullah bin Mohammed bin Farhan al-Saud;Muslims and Islam;Royal Families;Christie's;Mohammed bin Salman (1985- );Salman, King of Saudi Arabia;Saudi Arabia;Salvator Mundi",
+      "column": null,
+      "section": "World",
+      "byline": "By DAVID D. KIRKPATRICK",
+      "type": "Article",
+      "title": "Mystery Buyer of $450 Million ‘Salvator Mundi’ Was a Saudi Prince",
+      "abstract": "The prince bought Leonardo da Vinci’s portrait of Christ, according to documents reviewed by The New York Times.",
+      "published_date": "2017-12-06",
+      "source": "The New York Times",
+      "id": 100000005587801,
+      "asset_id": 100000005587801,
+      "views": 13,
+      "des_facet": [
+        "ART",
+        "AUCTIONS"
+      ],
+      "org_facet": [
+        "MUSLIMS AND ISLAM",
+        "ROYAL FAMILIES",
+        "CHRISTIE'S"
+      ],
+      "per_facet": [
+        "DA VINCI, LEONARDO",
+        "BADER BIN ABDULLAH BIN MOHAMMED BIN FARHAN AL-SAUD",
+        "MOHAMMED BIN SALMAN (1985- )",
+        "SALMAN, KING OF SAUDI ARABIA"
+      ],
+      "geo_facet": [
+        "SAUDI ARABIA"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Bidding for Leonardo da Vinci&rsquo;s &ldquo;Salvator Mundi&rdquo; at Christie&rsquo;s in New York last month. The identity of the bidder had been a tantalizing secret that had fueled gossip and speculation.",
+          "copyright": "Michelle V. Agins/The New York Times",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/world/07davinci1/merlin_130154504_0224d80e-ca7b-4efa-8611-899523400933-square320.jpg",
+              "format": "square320",
+              "height": 320,
+              "width": 320
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/world/07davinci1/merlin_130154504_0224d80e-ca7b-4efa-8611-899523400933-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/world/07davinci1/merlin_130154504_0224d80e-ca7b-4efa-8611-899523400933-articleInline.jpg",
+              "format": "Normal",
+              "height": 127,
+              "width": 190
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/world/07davinci1/merlin_130154504_0224d80e-ca7b-4efa-8611-899523400933-sfSpan.jpg",
+              "format": "Large",
+              "height": 263,
+              "width": 395
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/world/07davinci1/merlin_130154504_0224d80e-ca7b-4efa-8611-899523400933-jumbo.jpg",
+              "format": "Jumbo",
+              "height": 683,
+              "width": 1024
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/world/07davinci1/merlin_130154504_0224d80e-ca7b-4efa-8611-899523400933-superJumbo.jpg",
+              "format": "superJumbo",
+              "height": 1365,
+              "width": 2048
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/world/07davinci1/merlin_130154504_0224d80e-ca7b-4efa-8611-899523400933-square640.jpg",
+              "format": "square640",
+              "height": 640,
+              "width": 640
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/world/07davinci1/merlin_130154504_0224d80e-ca7b-4efa-8611-899523400933-thumbLarge.jpg",
+              "format": "Large Thumbnail",
+              "height": 150,
+              "width": 150
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/world/07davinci1/merlin_130154504_0224d80e-ca7b-4efa-8611-899523400933-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/world/07davinci1/merlin_130154504_0224d80e-ca7b-4efa-8611-899523400933-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.nytimes.com/2017/12/05/us/politics/supreme-court-same-sex-marriage-cake.html",
+      "adx_keywords": "Same-Sex Marriage, Civil Unions and Domestic Partnerships;Masterpiece Cakeshop (Lakewood, Colo);Bakeries and Baked Products;Phillips, Jack (1956- );Supreme Court (US);Homosexuality and Bisexuality;Discrimination;Freedom of Speech and Expression;Constitution (US);Kennedy, Anthony M;Colorado",
+      "column": null,
+      "section": "U.S.",
+      "byline": "By ADAM LIPTAK",
+      "type": "Article",
+      "title": "Justices Sharply Divided in Gay Rights Case",
+      "abstract": "A Colorado baker’s refusal to serve a gay couple on religious grounds has led to a major Supreme Court showdown.",
+      "published_date": "2017-12-05",
+      "source": "The New York Times",
+      "id": 100000005585985,
+      "asset_id": 100000005585985,
+      "views": 14,
+      "des_facet": [
+        "SAME-SEX MARRIAGE, CIVIL UNIONS AND DOMESTIC PARTNERSHIPS",
+        "HOMOSEXUALITY AND BISEXUALITY",
+        "DISCRIMINATION",
+        "FREEDOM OF SPEECH AND EXPRESSION"
+      ],
+      "org_facet": [
+        "MASTERPIECE CAKESHOP (LAKEWOOD, COLO)",
+        "BAKERIES AND BAKED PRODUCTS",
+        "SUPREME COURT (US)",
+        "CONSTITUTION (US)"
+      ],
+      "per_facet": [
+        "PHILLIPS, JACK (1956- )",
+        "KENNEDY, ANTHONY M"
+      ],
+      "geo_facet": [
+        "COLORADO"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Nick Cote for The New York Times. Technology by Samsung.",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2017/09/17/us/360-bakercover/360-bakercover-square320.jpg",
+              "format": "square320",
+              "height": 320,
+              "width": 320
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/09/17/us/360-bakercover/360-bakercover-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/09/17/us/360-bakercover/360-bakercover-articleInline.jpg",
+              "format": "Normal",
+              "height": 123,
+              "width": 190
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/09/17/us/360-bakercover/360-bakercover-sfSpan.jpg",
+              "format": "Large",
+              "height": 263,
+              "width": 395
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/09/17/us/360-bakercover/360-bakercover-jumbo.jpg",
+              "format": "Jumbo",
+              "height": 664,
+              "width": 1024
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/09/17/us/360-bakercover/360-bakercover-superJumbo.jpg",
+              "format": "superJumbo",
+              "height": 1328,
+              "width": 2048
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/09/17/us/360-bakercover/360-bakercover-square640.jpg",
+              "format": "square640",
+              "height": 640,
+              "width": 640
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/09/17/us/360-bakercover/360-bakercover-thumbLarge.jpg",
+              "format": "Large Thumbnail",
+              "height": 150,
+              "width": 150
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/09/17/us/360-bakercover/360-bakercover-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/09/17/us/360-bakercover/360-bakercover-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.nytimes.com/2017/12/06/movies/best-movies.html",
+      "adx_keywords": "Movies;A Fantastic Woman (Movie);A Quiet Passion (Movie);Dunkirk (Movie);Faces Places (Movie);Get Out (Movie);Graduation (Movie);I Am Not Your Negro (Movie);Lady Bird (Movie);Phantom Thread (Movie);The Florida Project (Movie);War for the Planet of the Apes (Movie);Okja (Movie);Wonder Woman (Movie);Ex Libris: New York Public Library (Movie)",
+      "column": null,
+      "section": "Movies",
+      "byline": "By MANOHLA DARGIS and A.O. SCOTT",
+      "type": "Article",
+      "title": "The Best Movies of 2017",
+      "abstract": "Our chief film critics on their favorite pictures of the year.",
+      "published_date": "2017-12-06",
+      "source": "The New York Times",
+      "id": 100000005575017,
+      "asset_id": 100000005575017,
+      "views": 15,
+      "des_facet": [
+        "MOVIES"
+      ],
+      "org_facet": "",
+      "per_facet": "",
+      "geo_facet": "",
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "The best movies of 2017 included, clockwise from top left: “Dunkirk,” “Get Out,” “The Florida Project,” “Lady Bird,” “Okja” and “Wonder Woman.”",
+          "copyright": "Warner Bros.; Universal Pictures; A24; Merrick Morton/A24; Netflix; Clay Enos/Warner Bros",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2017/12/10/arts/10BEST-OF-FILMS-GRID/10BEST-OF-FILMS-GRID-square320.jpg",
+              "format": "square320",
+              "height": 320,
+              "width": 320
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/10/arts/10BEST-OF-FILMS-GRID/10BEST-OF-FILMS-GRID-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/10/arts/10BEST-OF-FILMS-GRID/10BEST-OF-FILMS-GRID-articleInline.jpg",
+              "format": "Normal",
+              "height": 127,
+              "width": 190
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/10/arts/10BEST-OF-FILMS-GRID/10BEST-OF-FILMS-GRID-sfSpan.jpg",
+              "format": "Large",
+              "height": 263,
+              "width": 395
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/10/arts/10BEST-OF-FILMS-GRID/10BEST-OF-FILMS-GRID-jumbo.jpg",
+              "format": "Jumbo",
+              "height": 683,
+              "width": 1024
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/10/arts/10BEST-OF-FILMS-GRID/10BEST-OF-FILMS-GRID-superJumbo.jpg",
+              "format": "superJumbo",
+              "height": 1365,
+              "width": 2048
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/10/arts/10BEST-OF-FILMS-GRID/10BEST-OF-FILMS-GRID-square640.jpg",
+              "format": "square640",
+              "height": 640,
+              "width": 640
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/10/arts/10BEST-OF-FILMS-GRID/10BEST-OF-FILMS-GRID-thumbLarge.jpg",
+              "format": "Large Thumbnail",
+              "height": 150,
+              "width": 150
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/10/arts/10BEST-OF-FILMS-GRID/10BEST-OF-FILMS-GRID-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/10/arts/10BEST-OF-FILMS-GRID/10BEST-OF-FILMS-GRID-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.nytimes.com/2017/12/06/world/middleeast/jerusalem-trump-embassy.html",
+      "adx_keywords": "Israel;Jerusalem (Israel);Palestinians;Trump, Donald J;United States International Relations;Diplomatic Service, Embassies and Consulates;Fatah, Al;Hamas;Abbas, Mahmoud;Netanyahu, Benjamin;West Bank;Gaza Strip;Middle East",
+      "column": null,
+      "section": "World",
+      "byline": "By DAVID M. HALBFINGER, MARK LANDLER and ISABEL KERSHNER",
+      "type": "Article",
+      "title": "Trump Calls Jerusalem Plan Step Toward Peace, but It Puts Mideast on Edge",
+      "abstract": "An Israeli minister said moving the U.S. Embassy to Jerusalem would be “destiny.” The leader of Hamas called it “an unaccountable gamble.”",
+      "published_date": "2017-12-06",
+      "source": "The New York Times",
+      "id": 100000005589599,
+      "asset_id": 100000005589599,
+      "views": 16,
+      "des_facet": [
+        "PALESTINIANS",
+        "UNITED STATES INTERNATIONAL RELATIONS"
+      ],
+      "org_facet": [
+        "DIPLOMATIC SERVICE, EMBASSIES AND CONSULATES",
+        "FATAH, AL",
+        "HAMAS"
+      ],
+      "per_facet": [
+        "TRUMP, DONALD J",
+        "ABBAS, MAHMOUD",
+        "NETANYAHU, BENJAMIN"
+      ],
+      "geo_facet": [
+        "ISRAEL",
+        "JERUSALEM (ISRAEL)",
+        "WEST BANK",
+        "GAZA STRIP",
+        "MIDDLE EAST"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Israeli forces take position as Palestinian protesters gather outside Damascus Gate in Jerusalem’s Old City on Thursday.",
+          "copyright": "Menahem Kahana/Agence France-Presse — Getty Images",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/world/07mideast1-sub/07mideast1-sub-square320.jpg",
+              "format": "square320",
+              "height": 320,
+              "width": 320
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/world/07mideast1-sub/07mideast1-sub-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/world/07mideast1-sub/07mideast1-sub-articleInline.jpg",
+              "format": "Normal",
+              "height": 128,
+              "width": 190
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/world/07mideast1-sub/07mideast1-sub-sfSpan.jpg",
+              "format": "Large",
+              "height": 263,
+              "width": 395
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/world/07mideast1-sub/07mideast1-sub-jumbo.jpg",
+              "format": "Jumbo",
+              "height": 689,
+              "width": 1024
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/world/07mideast1-sub/07mideast1-sub-superJumbo.jpg",
+              "format": "superJumbo",
+              "height": 1378,
+              "width": 2048
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/world/07mideast1-sub/07mideast1-sub-square640.jpg",
+              "format": "square640",
+              "height": 640,
+              "width": 640
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/world/07mideast1-sub/07mideast1-sub-thumbLarge.jpg",
+              "format": "Large Thumbnail",
+              "height": 150,
+              "width": 150
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/world/07mideast1-sub/07mideast1-sub-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/world/07mideast1-sub/07mideast1-sub-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.nytimes.com/2017/12/06/us/politics/john-conyers-iii-stabbing-domestic-violence.html",
+      "adx_keywords": "Sexual Harassment;United States Politics and Government;Murders, Attempted Murders and Homicides;Conyers, John III;Conyers, John Jr",
+      "column": null,
+      "section": "U.S.",
+      "byline": "By YAMICHE ALCINDOR",
+      "type": "Article",
+      "title": "John Conyers’s Son Was Arrested This Year, Accused of Stabbing His Girlfriend",
+      "abstract": "John Conyers III, whose father endorsed him for a House seat he resigned amid harassment allegations, was arrested in February after his girlfriend suffered knife cuts during an argument.",
+      "published_date": "2017-12-06",
+      "source": "The New York Times",
+      "id": 100000005590820,
+      "asset_id": 100000005590820,
+      "views": 17,
+      "des_facet": [
+        "SEXUAL HARASSMENT",
+        "UNITED STATES POLITICS AND GOVERNMENT"
+      ],
+      "org_facet": [
+        "MURDERS, ATTEMPTED MURDERS AND HOMICIDES"
+      ],
+      "per_facet": [
+        "CONYERS, JOHN III",
+        "CONYERS, JOHN JR"
+      ],
+      "geo_facet": "",
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "John Conyers III, son of the retired Representative John Conyers Jr., at a movie premiere in July.",
+          "copyright": "Aaron J. Thornton/Getty Images",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-conyers/07dc-conyers-square320.jpg",
+              "format": "square320",
+              "height": 320,
+              "width": 320
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-conyers/07dc-conyers-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-conyers/07dc-conyers-articleInline.jpg",
+              "format": "Normal",
+              "height": 127,
+              "width": 190
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-conyers/07dc-conyers-sfSpan.jpg",
+              "format": "Large",
+              "height": 263,
+              "width": 395
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-conyers/07dc-conyers-jumbo.jpg",
+              "format": "Jumbo",
+              "height": 682,
+              "width": 1024
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-conyers/07dc-conyers-superJumbo.jpg",
+              "format": "superJumbo",
+              "height": 1330,
+              "width": 1996
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-conyers/07dc-conyers-square640.jpg",
+              "format": "square640",
+              "height": 640,
+              "width": 640
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-conyers/07dc-conyers-thumbLarge.jpg",
+              "format": "Large Thumbnail",
+              "height": 150,
+              "width": 150
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-conyers/07dc-conyers-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/us/politics/07dc-conyers/07dc-conyers-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.nytimes.com/interactive/2017/books/review/10-best-books-2017.html",
+      "adx_keywords": "Books and Literature",
+      "column": "",
+      "section": "Books",
+      "byline": "",
+      "type": "Interactive",
+      "title": "The 10 Best Books of 2017",
+      "abstract": "The year’s best books, selected by the editors of The New York Times Book Review.",
+      "published_date": "2017-11-30",
+      "source": "The New York Times",
+      "id": 100000005575604,
+      "asset_id": 100000005575604,
+      "views": 18,
+      "des_facet": [
+        "BOOKS AND LITERATURE"
+      ],
+      "org_facet": "",
+      "per_facet": "",
+      "geo_facet": "",
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Nicole Licht",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2017/12/10/books/review/10TenBest-COVER/10TenBest-COVER-square320.jpg",
+              "format": "square320",
+              "height": 320,
+              "width": 320
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/10/books/review/10TenBest-COVER/10TenBest-COVER-thumbStandard-v2.gif",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/10/books/review/10TenBest-COVER/10TenBest-COVER-articleInline-v6.gif",
+              "format": "Normal",
+              "height": 186,
+              "width": 190
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/10/books/review/10TenBest-COVER/10TenBest-COVER-sfSpan.jpg",
+              "format": "Large",
+              "height": 264,
+              "width": 395
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/10/books/review/10TenBest-COVER/10TenBest-COVER-jumbo.jpg",
+              "format": "Jumbo",
+              "height": 1004,
+              "width": 1024
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/10/books/review/10TenBest-COVER/10TenBest-COVER-superJumbo.jpg",
+              "format": "superJumbo",
+              "height": 2009,
+              "width": 2048
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/10/books/review/10TenBest-COVER/10TenBest-COVER-square640.jpg",
+              "format": "square640",
+              "height": 640,
+              "width": 640
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/10/books/review/10TenBest-COVER/10TenBest-COVER-thumbLarge.jpg",
+              "format": "Large Thumbnail",
+              "height": 150,
+              "width": 150
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/10/books/review/10TenBest-COVER/10TenBest-COVER-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/10/books/review/10TenBest-COVER/10TenBest-COVER-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.nytimes.com/2017/12/06/opinion/trump-foreign-policy-giveaway.html",
+      "adx_keywords": "Trump, Donald J;Israel;China;United States International Relations;International Trade and World Market;Israeli Settlements;Trans-Pacific Partnership;Palestinians;East Jerusalem;Jerusalem (Israel)",
+      "column": "Op-Ed Columnist",
+      "section": "Opinion",
+      "byline": "By THOMAS L. FRIEDMAN",
+      "type": "Article",
+      "title": "Trump, Israel and the Art of the Giveaway",
+      "abstract": "I’ve never seen a president give up so much to so many for so little.",
+      "published_date": "2017-12-06",
+      "source": "The New York Times",
+      "id": 100000005590051,
+      "asset_id": 100000005590051,
+      "views": 19,
+      "des_facet": [
+        "UNITED STATES INTERNATIONAL RELATIONS",
+        "INTERNATIONAL TRADE AND WORLD MARKET",
+        "ISRAELI SETTLEMENTS"
+      ],
+      "org_facet": [
+        "TRANS-PACIFIC PARTNERSHIP",
+        "PALESTINIANS"
+      ],
+      "per_facet": [
+        "TRUMP, DONALD J"
+      ],
+      "geo_facet": [
+        "ISRAEL",
+        "CHINA",
+        "EAST JERUSALEM",
+        "JERUSALEM (ISRAEL)"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Ahmad Gharabli/Agence France-Presse — Getty Images",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/opinion/07FRIEDMAN1/07FRIEDMAN1-square320.jpg",
+              "format": "square320",
+              "height": 320,
+              "width": 320
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/opinion/07FRIEDMAN1/07FRIEDMAN1-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/opinion/07FRIEDMAN1/07FRIEDMAN1-articleInline.jpg",
+              "format": "Normal",
+              "height": 127,
+              "width": 190
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/opinion/07FRIEDMAN1/07FRIEDMAN1-sfSpan.jpg",
+              "format": "Large",
+              "height": 263,
+              "width": 395
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/opinion/07FRIEDMAN1/07FRIEDMAN1-jumbo.jpg",
+              "format": "Jumbo",
+              "height": 683,
+              "width": 1024
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/opinion/07FRIEDMAN1/07FRIEDMAN1-superJumbo.jpg",
+              "format": "superJumbo",
+              "height": 1365,
+              "width": 2048
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/opinion/07FRIEDMAN1/07FRIEDMAN1-square640.jpg",
+              "format": "square640",
+              "height": 640,
+              "width": 640
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/opinion/07FRIEDMAN1/07FRIEDMAN1-thumbLarge.jpg",
+              "format": "Large Thumbnail",
+              "height": 150,
+              "width": 150
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/opinion/07FRIEDMAN1/07FRIEDMAN1-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/opinion/07FRIEDMAN1/07FRIEDMAN1-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.nytimes.com/2017/12/06/health/unitedhealth-doctors-insurance.html",
+      "adx_keywords": "Health Insurance and Managed Care;Doctors;Aetna Inc;CVS Caremark Corporation;UnitedHealth Group Inc;Optum Inc;DaVita HealthCare Partners Inc",
+      "column": null,
+      "section": "Health",
+      "byline": "By REED ABELSON",
+      "type": "Article",
+      "title": "UnitedHealth Buys Large Doctors Group as Lines Blur in Health Care",
+      "abstract": "The purchase of DaVita Medical Group moves UnitedHealth more into the role of doctor as it buys nearly 300 clinics across six states.",
+      "published_date": "2017-12-06",
+      "source": "The New York Times",
+      "id": 100000005589060,
+      "asset_id": 100000005589060,
+      "views": 20,
+      "des_facet": [
+        "HEALTH INSURANCE AND MANAGED CARE",
+        "DOCTORS"
+      ],
+      "org_facet": [
+        "AETNA INC",
+        "CVS CAREMARK CORPORATION",
+        "UNITEDHEALTH GROUP INC",
+        "OPTUM INC",
+        "DAVITA HEALTHCARE PARTNERS INC"
+      ],
+      "per_facet": "",
+      "geo_facet": "",
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Part of the UnitedHealth Group campus in Minnetonka, Minn. The company’s Optum unit is buying a large physician group.",
+          "copyright": "Jim Mone/Associated Press",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/business/07insure/07insure-square320.jpg",
+              "format": "square320",
+              "height": 320,
+              "width": 320
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/business/07insure/07insure-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/business/07insure/07insure-articleInline-v2.jpg",
+              "format": "Normal",
+              "height": 125,
+              "width": 190
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/business/07insure/07insure-sfSpan.jpg",
+              "format": "Large",
+              "height": 263,
+              "width": 395
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/business/07insure/07insure-jumbo-v2.jpg",
+              "format": "Jumbo",
+              "height": 676,
+              "width": 1024
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/business/07insure/07insure-superJumbo-v2.jpg",
+              "format": "superJumbo",
+              "height": 1353,
+              "width": 2048
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/business/07insure/07insure-square640.jpg",
+              "format": "square640",
+              "height": 640,
+              "width": 640
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/business/07insure/07insure-thumbLarge.jpg",
+              "format": "Large Thumbnail",
+              "height": 150,
+              "width": 150
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/business/07insure/07insure-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2017/12/07/business/07insure/07insure-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ]
     }
-  }
+  ]
 };
 var responseArray = [];
 
@@ -2162,4 +2057,3 @@ for (let i = 0; i < 10; i++) {
 	};
 }
 l(responseArray);
-//console.log(response.response.docs[0]);
